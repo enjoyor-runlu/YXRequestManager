@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  #s.source_files = 'YXRequestManage/Classes/**/*'
-  s.source_files  = "YXRequestManage", "YXRequestManage/**/*.{h,m}"
+  s.source_files = 'YXRequestManage/Classes/*.{h,m}'
+#s.source_files  = "YXRequestManage", "YXRequestManage/**/*.{h,m}"
   
   # s.resource_bundles = {
   #   'JGSOutDoorClub' => ['YXRequestManage/Assets/*.png']
