@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXRequestManage'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'YXRequestManage.'
 
 # This description is used to generate tags and improve search results.
@@ -25,16 +25,16 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jiaguoshang' => 'jia12216@163.com' }
-  s.source           = { :git => 'https://github.com/enjoyor-runlu/YXRequestManage.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/enjoyor-runlu/AERequestManage.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'YXRequestManage/Classes/*.{h,m}'
+  s.source_files = 'AERequestManage/Classes/*.{h,m}'
 #s.source_files  = "YXRequestManage", "YXRequestManage/**/*.{h,m}"
   
   # s.resource_bundles = {
-  #   'JGSOutDoorClub' => ['YXRequestManage/Assets/*.png']
+  #   'AERequestManage' => ['AERequestManage/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
