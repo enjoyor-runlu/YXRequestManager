@@ -30,11 +30,11 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'AERequestManage/Classes/*.{h,m}'
-#s.source_files  = "AERequestManage", "AERequestManage/**/*.{h,m}"
+  s.source_files = 'YXRequestManage/Classes/*.{h,m}'
+#s.source_files  = "YXRequestManage", "YXRequestManage/**/*.{h,m}"
   
   # s.resource_bundles = {
-  #   'AERequestManage' => ['AERequestManage/Assets/*.png']
+  #   'YXRequestManage' => ['YXRequestManage/Assets/*.png']
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
