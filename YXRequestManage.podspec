@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXRequestManage'
-  s.version          = '0.0.9'
+  s.version          = '0.0.10'
   s.summary          = 'YXRequestManage.'
 
 # This description is used to generate tags and improve search results.
@@ -39,6 +39,7 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation'
+   s.dependency 'YXFDCategories'
    s.dependency 'AFNetworking', '3.1.0'
    s.dependency 'TMCache'
 end
