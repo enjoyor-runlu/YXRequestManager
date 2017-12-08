@@ -1,0 +1,39 @@
+//
+//  YXCacheCenter.h
+//  Pods
+//
+//  Created by luminary on 2016/10/31.
+//
+//
+
+#import <Foundation/Foundation.h>
+
+typedef void (^CacheCallback)();
+
+typedef void (^CacheObjectCallback)(NSString *key, id object);
+@interface YXCacheCenter : NSObject
+    
++ (instancetype)sharedInstance;
+    
+// 同步方法
+    
+- (id)objectForKey:(NSString *)key withParams:(NSDictionary *)params;
+    
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withParams:(NSDictionary *)params;
+    
+- (void)removeObjectForKey:(NSString *)key withParams:(NSDictionary *)params;;
+    
+- (void)clearCache;
+    
+// 异步方法
+    
+- (void)objectForKey:(NSString *)key withParams:(NSDictionary *)params withCallback:(CacheObjectCallback)cb;
+    
+- (void)setObject:(id <NSCoding>)object forKey:(NSString *)key withParams:(NSDictionary *)params withCallback:(CacheObjectCallback)cb;
+    
+- (void)removeObjectForKey:(NSString *)key withParams:(NSDictionary *)params withCallback:(CacheObjectCallback)cb;
+    
+- (void)clearCache:(CacheCallback)cb;
+
+
+@end

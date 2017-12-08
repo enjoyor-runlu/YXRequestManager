@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5359A80D1FD81C77001CC605 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5359A8041FD81C77001CC605 /* AFURLResponseSerialization.m */; };
-		5359A80E1FD81C77001CC605 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5359A8051FD81C77001CC605 /* AFHTTPSessionManager.m */; };
-		5359A80F1FD81C77001CC605 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5359A8071FD81C77001CC605 /* AFURLSessionManager.m */; };
-		5359A8101FD81C77001CC605 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 5359A8081FD81C77001CC605 /* AFURLRequestSerialization.m */; };
-		5359A8111FD81C77001CC605 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5359A80A1FD81C77001CC605 /* AFNetworkReachabilityManager.m */; };
-		5359A8121FD81C77001CC605 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5359A80B1FD81C77001CC605 /* AFSecurityPolicy.m */; };
+		53536BE11FDA30F300619AD3 /* YXCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD21FDA30F300619AD3 /* YXCacheCenter.m */; };
+		53536BE21FDA30F300619AD3 /* YXRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD41FDA30F300619AD3 /* YXRequestApi.m */; };
+		53536BE31FDA30F300619AD3 /* YXBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD51FDA30F300619AD3 /* YXBaseRequestApi.m */; };
+		53536BE41FDA30F300619AD3 /* YXRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD71FDA30F300619AD3 /* YXRequestClient.m */; };
+		53536BE51FDA30F300619AD3 /* YXRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD91FDA30F300619AD3 /* YXRequestConfig.m */; };
+		53536BE61FDA30F300619AD3 /* YXRequestChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BDD1FDA30F300619AD3 /* YXRequestChain.m */; };
+		53536BE71FDA30F300619AD3 /* YXRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BE01FDA30F300619AD3 /* YXRequestManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,20 +29,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		53536BCD1FDA30F300619AD3 /* ＊.caocaokeji.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.caocaokeji.cn.cer"; sourceTree = "<group>"; };
+		53536BCE1FDA30F300619AD3 /* YXRequestManager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManager.xcassets; sourceTree = "<group>"; };
+		53536BD11FDA30F300619AD3 /* YXCacheCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCacheCenter.h; sourceTree = "<group>"; };
+		53536BD21FDA30F300619AD3 /* YXCacheCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCacheCenter.m; sourceTree = "<group>"; };
+		53536BD41FDA30F300619AD3 /* YXRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestApi.m; sourceTree = "<group>"; };
+		53536BD51FDA30F300619AD3 /* YXBaseRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBaseRequestApi.m; sourceTree = "<group>"; };
+		53536BD61FDA30F300619AD3 /* YXRequestChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestChain.h; sourceTree = "<group>"; };
+		53536BD71FDA30F300619AD3 /* YXRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestClient.m; sourceTree = "<group>"; };
+		53536BD81FDA30F300619AD3 /* YXRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestManager.h; sourceTree = "<group>"; };
+		53536BD91FDA30F300619AD3 /* YXRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestConfig.m; sourceTree = "<group>"; };
+		53536BDA1FDA30F300619AD3 /* YXBaseRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBaseRequestApi.h; sourceTree = "<group>"; };
+		53536BDB1FDA30F300619AD3 /* YXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequest.h; sourceTree = "<group>"; };
+		53536BDC1FDA30F300619AD3 /* YXRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestApi.h; sourceTree = "<group>"; };
+		53536BDD1FDA30F300619AD3 /* YXRequestChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestChain.m; sourceTree = "<group>"; };
+		53536BDE1FDA30F300619AD3 /* YXRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestClient.h; sourceTree = "<group>"; };
+		53536BDF1FDA30F300619AD3 /* YXRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestConfig.h; sourceTree = "<group>"; };
+		53536BE01FDA30F300619AD3 /* YXRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestManager.m; sourceTree = "<group>"; };
 		5359A7F31FD81C39001CC605 /* libYXRequestManage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYXRequestManage.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		5359A8001FD81C77001CC605 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
-		5359A8011FD81C77001CC605 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
-		5359A8021FD81C77001CC605 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
-		5359A8031FD81C77001CC605 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
-		5359A8041FD81C77001CC605 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
-		5359A8051FD81C77001CC605 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
-		5359A8061FD81C77001CC605 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
-		5359A8071FD81C77001CC605 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		5359A8081FD81C77001CC605 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
-		5359A8091FD81C77001CC605 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
-		5359A80A1FD81C77001CC605 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
-		5359A80B1FD81C77001CC605 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
-		5359A80C1FD81C77001CC605 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53536BCC1FDA30F300619AD3 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				53536BCD1FDA30F300619AD3 /* ＊.caocaokeji.cn.cer */,
+				53536BCE1FDA30F300619AD3 /* YXRequestManager.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		53536BCF1FDA30F300619AD3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				53536BD01FDA30F300619AD3 /* YXCache */,
+				53536BD31FDA30F300619AD3 /* YXRequest */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		53536BD01FDA30F300619AD3 /* YXCache */ = {
+			isa = PBXGroup;
+			children = (
+				53536BD11FDA30F300619AD3 /* YXCacheCenter.h */,
+				53536BD21FDA30F300619AD3 /* YXCacheCenter.m */,
+			);
+			path = YXCache;
+			sourceTree = "<group>";
+		};
+		53536BD31FDA30F300619AD3 /* YXRequest */ = {
+			isa = PBXGroup;
+			children = (
+				53536BD41FDA30F300619AD3 /* YXRequestApi.m */,
+				53536BD51FDA30F300619AD3 /* YXBaseRequestApi.m */,
+				53536BD61FDA30F300619AD3 /* YXRequestChain.h */,
+				53536BD71FDA30F300619AD3 /* YXRequestClient.m */,
+				53536BD81FDA30F300619AD3 /* YXRequestManager.h */,
+				53536BD91FDA30F300619AD3 /* YXRequestConfig.m */,
+				53536BDA1FDA30F300619AD3 /* YXBaseRequestApi.h */,
+				53536BDB1FDA30F300619AD3 /* YXRequest.h */,
+				53536BDC1FDA30F300619AD3 /* YXRequestApi.h */,
+				53536BDD1FDA30F300619AD3 /* YXRequestChain.m */,
+				53536BDE1FDA30F300619AD3 /* YXRequestClient.h */,
+				53536BDF1FDA30F300619AD3 /* YXRequestConfig.h */,
+				53536BE01FDA30F300619AD3 /* YXRequestManager.m */,
+			);
+			path = YXRequest;
+			sourceTree = "<group>";
+		};
 		5359A7EA1FD81C39001CC605 = {
 			isa = PBXGroup;
 			children = (
@@ -74,29 +126,10 @@
 		5359A7F51FD81C39001CC605 /* YXRequestManage */ = {
 			isa = PBXGroup;
 			children = (
-				5359A7FF1FD81C77001CC605 /* Classes */,
+				53536BCC1FDA30F300619AD3 /* Assets */,
+				53536BCF1FDA30F300619AD3 /* Classes */,
 			);
 			path = YXRequestManage;
-			sourceTree = "<group>";
-		};
-		5359A7FF1FD81C77001CC605 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				5359A8001FD81C77001CC605 /* AFSecurityPolicy.h */,
-				5359A8011FD81C77001CC605 /* AFNetworkReachabilityManager.h */,
-				5359A8021FD81C77001CC605 /* AFURLSessionManager.h */,
-				5359A8031FD81C77001CC605 /* AFURLRequestSerialization.h */,
-				5359A8041FD81C77001CC605 /* AFURLResponseSerialization.m */,
-				5359A8051FD81C77001CC605 /* AFHTTPSessionManager.m */,
-				5359A8061FD81C77001CC605 /* AFURLResponseSerialization.h */,
-				5359A8071FD81C77001CC605 /* AFURLSessionManager.m */,
-				5359A8081FD81C77001CC605 /* AFURLRequestSerialization.m */,
-				5359A8091FD81C77001CC605 /* AFNetworking.h */,
-				5359A80A1FD81C77001CC605 /* AFNetworkReachabilityManager.m */,
-				5359A80B1FD81C77001CC605 /* AFSecurityPolicy.m */,
-				5359A80C1FD81C77001CC605 /* AFHTTPSessionManager.h */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,12 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5359A80F1FD81C77001CC605 /* AFURLSessionManager.m in Sources */,
-				5359A80D1FD81C77001CC605 /* AFURLResponseSerialization.m in Sources */,
-				5359A8111FD81C77001CC605 /* AFNetworkReachabilityManager.m in Sources */,
-				5359A80E1FD81C77001CC605 /* AFHTTPSessionManager.m in Sources */,
-				5359A8121FD81C77001CC605 /* AFSecurityPolicy.m in Sources */,
-				5359A8101FD81C77001CC605 /* AFURLRequestSerialization.m in Sources */,
+				53536BE11FDA30F300619AD3 /* YXCacheCenter.m in Sources */,
+				53536BE41FDA30F300619AD3 /* YXRequestClient.m in Sources */,
+				53536BE61FDA30F300619AD3 /* YXRequestChain.m in Sources */,
+				53536BE21FDA30F300619AD3 /* YXRequestApi.m in Sources */,
+				53536BE71FDA30F300619AD3 /* YXRequestManager.m in Sources */,
+				53536BE51FDA30F300619AD3 /* YXRequestConfig.m in Sources */,
+				53536BE31FDA30F300619AD3 /* YXBaseRequestApi.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
