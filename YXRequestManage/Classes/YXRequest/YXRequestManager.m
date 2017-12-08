@@ -2,14 +2,14 @@
 //  YXRequestManager.m
 //  Pods
 //
-//  Created by luminary on 2016/10/31.
+//  Created by jiaguoshang on 2016/10/31.
 //
 //
 
 #import "YXRequestManager.h"
 #import "YXRequestConfig.h"
 #import "YXRequestApi.h"
-#import <UXFDCategories/UXFDCategory.h>
+#import <YXFDCategories/YXFDCategory.h>
 #if __has_include(<AFNetworking/AFNetworking.h>)
 #import <AFNetworking/AFNetworking.h>
 #else
@@ -177,7 +177,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     self.requestCount++;
     NSString *urlString = [requestApi.baseURL stringByAppendingString:requestApi.apiPath];
     //计算请求URL和参数拼接字符串的MD5值
-    NSString *apiMD5 = [[NSString combineURLWithBaseURL:urlString parameters:requestApi.params] uxing_md5hashString];
+    NSString *apiMD5 = [[NSString combineURLWithBaseURL:urlString parameters:requestApi.params] yixiang_md5hashString];
     YXRequestApi *savedApi = [self.requestMap objectForKey:apiMD5];
     if (savedApi) {
         if (requestApi.allowConcurrentExecution) {
@@ -511,7 +511,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
 
 - (NSURL *)incompleteDownloadTempPathForDownloadPath:(NSString *)downloadPath {
     NSString *tempPath = nil;
-    NSString *md5URLString = [downloadPath uxing_md5hashString];
+    NSString *md5URLString = [downloadPath yixiang_md5hashString];
     tempPath = [[self incompleteDownloadTempCacheFolder] stringByAppendingPathComponent:md5URLString];
     return [NSURL fileURLWithPath:tempPath];
 }
@@ -579,7 +579,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     //第四步,拼接上特殊的key,key=1234567890
     [sortedString appendString:[NSString stringWithFormat:@"&key=%@", SpecialKeyValue]];
     //第五步,MD5加密
-    NSString *md5String = [sortedString uxing_md5hashString];
+    NSString *md5String = [sortedString yixiang_md5hashString];
     //第六步,全部转大写
     return [md5String uppercaseString];
 }

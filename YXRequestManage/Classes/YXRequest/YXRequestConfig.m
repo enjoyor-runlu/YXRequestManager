@@ -2,12 +2,12 @@
 //  YXRequestConfig.m
 //  Pods
 //
-//  Created by luminary on 2016/10/31.
+//  Created by jiaguoshang on 2016/10/31.
 //
 //
 
 #import "YXRequestConfig.h"
-#import <UXFDCategories/UXFDCategory.h>
+#import <YXFDCategories/YXFDCategory.h>
 
 @interface YXRequestConfig ()
 
@@ -59,12 +59,12 @@
 {
     NSMutableDictionary *muBuiltinParameters = [[NSMutableDictionary alloc] init];
     [muBuiltinParameters setSafeObject:@"ios" forKey:@"mobileType"];//手机类型
-    [muBuiltinParameters setSafeObject:[UIDevice uxing_uniqueID] forKey:@"deviceId"];//设备唯一ID
-    [muBuiltinParameters setSafeObject:[UIDevice uxing_appVersion] forKey:@"appVersion"];//版本号
-    [muBuiltinParameters setSafeObject:[UIDevice uxing_buildVersion] forKey:@"buildVersion"];//build号
-    [muBuiltinParameters setSafeObject:[UIDevice uxing_fullVersion] forKey:@"fullVersion"];//完整版本号(版本号+build号)
-    [muBuiltinParameters setSafeObject:[UIDevice uxing_systemType] forKey:@"systemType"];//手机型号
-    [muBuiltinParameters setSafeObject:[UIDevice uxing_systemVersion] forKey:@"systemVersion"];//系统版本
+    [muBuiltinParameters setSafeObject:[UIDevice yixiang_uniqueID] forKey:@"deviceId"];//设备唯一ID
+    [muBuiltinParameters setSafeObject:[UIDevice yixiang_appVersion] forKey:@"appVersion"];//版本号
+    [muBuiltinParameters setSafeObject:[UIDevice yixiang_buildVersion] forKey:@"buildVersion"];//build号
+    [muBuiltinParameters setSafeObject:[UIDevice yixiang_fullVersion] forKey:@"fullVersion"];//完整版本号(版本号+build号)
+    [muBuiltinParameters setSafeObject:[UIDevice yixiang_systemType] forKey:@"systemType"];//手机型号
+    [muBuiltinParameters setSafeObject:[UIDevice yixiang_systemVersion] forKey:@"systemVersion"];//系统版本
     [muBuiltinParameters setSafeObject:[UIDevice isJailBreak]?@"1":@"0" forKey:@"isJailBreak"];//是否越狱
     //渠道
     

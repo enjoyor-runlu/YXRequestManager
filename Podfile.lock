@@ -1,0 +1,35 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - SAMKeychain (1.5.2)
+  - TMCache (2.1.0)
+  - YXFDCategories (0.0.3):
+    - SAMKeychain
+
+DEPENDENCIES:
+  - AFNetworking (= 3.1.0)
+  - TMCache
+  - YXFDCategories
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
+  YXFDCategories: 81d99243443e1c31059015ca921e790b5fa28bae
+
+PODFILE CHECKSUM: 58b01c9579e081dab0635ccacd3b5c35e1bd7cf0
+
+COCOAPODS: 1.2.1

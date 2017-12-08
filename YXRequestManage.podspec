@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXRequestManage'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'YXRequestManage.'
 
 # This description is used to generate tags and improve search results.
@@ -30,14 +30,15 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'YXRequestManage/Classes/*.{h,m}'
+  s.source_files = 'YXRequestManage/Classes/**/*.{h,m}'
 #s.source_files  = "YXRequestManage", "YXRequestManage/**/*.{h,m}"
   
-  # s.resource_bundles = {
-  #   'YXRequestManage' => ['YXRequestManage/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'YXRequestManage' => ['YXRequestManage/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.dependency 'AFNetworking', '3.1.0'
+   s.dependency 'TMCache'
 end

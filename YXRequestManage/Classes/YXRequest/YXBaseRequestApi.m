@@ -2,7 +2,7 @@
 //  YXBaseRequestApi.m
 //  Pods
 //
-//  Created by luminary on 2016/10/31.
+//  Created by jiaguoshang on 2016/10/31.
 //
 //
 

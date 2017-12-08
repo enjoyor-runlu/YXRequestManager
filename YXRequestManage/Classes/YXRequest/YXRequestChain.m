@@ -2,13 +2,13 @@
 //  YXRequestChain.m
 //  Pods
 //
-//  Created by luminary on 2017/5/3.
+//  Created by jiaguoshang on 2016/5/3.
 //
 //
 
 #import "YXRequestChain.h"
 #import "YXRequestClient.h"
-#import <UXFDCategories/UXFDCategory.h>
+#import <YXFDCategories/YXFDCategory.h>
 
 #define MaxRequestIndex 666666
 

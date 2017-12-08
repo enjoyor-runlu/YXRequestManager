@@ -2,7 +2,7 @@
 //  YXRequest.h
 //  Pods
 //
-//  Created by luminary on 2016/11/21.
+//  Created by jiaguoshang on 2016/11/21.
 //
 //
 

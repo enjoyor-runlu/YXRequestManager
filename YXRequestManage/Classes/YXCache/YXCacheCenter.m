@@ -2,12 +2,12 @@
 //  YXCacheCenter.m
 //  Pods
 //
-//  Created by luminary on 2016/10/31.
+//  Created by jiaguoshang on 2016/10/31.
 //
 //
 
 #import "YXCacheCenter.h"
-#import <UXFDCategories/NSString+UXing.h>
+#import <YXFDCategories/NSString+YiXiang.h>
 #import <TMCache/TMCache.h>
 
 // 设置缓存时间为30天
@@ -49,7 +49,7 @@ static NSString * const YXCacheCenterDirectory = @"YXCacheCenterDirectory";
     {
         assert(_cache);
         assert(key);
-        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] uxing_md5hashString];
+        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] yixiang_md5hashString];
         id result = [_cache objectForKey:urlMd5Key];
         return result;
     }
@@ -59,7 +59,7 @@ static NSString * const YXCacheCenterDirectory = @"YXCacheCenterDirectory";
         assert(_cache);
         assert(object);
         assert(key);
-        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] uxing_md5hashString];
+        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] yixiang_md5hashString];
         return [_cache setObject:object forKey:urlMd5Key];
     }
     
@@ -67,7 +67,7 @@ static NSString * const YXCacheCenterDirectory = @"YXCacheCenterDirectory";
     {
         assert(_cache);
         assert(key);
-        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] uxing_md5hashString];
+        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] yixiang_md5hashString];
         [_cache removeObjectForKey:urlMd5Key];
     }
     
@@ -81,7 +81,7 @@ static NSString * const YXCacheCenterDirectory = @"YXCacheCenterDirectory";
     {
         assert(_cache);
         assert(key);
-        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] uxing_md5hashString];
+        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] yixiang_md5hashString];
         [_cache objectForKey:urlMd5Key block:^(TMCache *cache, NSString *key, id object) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (cb) {
@@ -96,7 +96,7 @@ static NSString * const YXCacheCenterDirectory = @"YXCacheCenterDirectory";
         assert(_cache);
         assert(key);
         assert(object);
-        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] uxing_md5hashString];
+        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] yixiang_md5hashString];
         [_cache setObject:object forKey:urlMd5Key block:^(TMCache *cache, NSString *key, id object) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (cb) {
@@ -109,7 +109,7 @@ static NSString * const YXCacheCenterDirectory = @"YXCacheCenterDirectory";
 - (void)removeObjectForKey:(NSString *)key withParams:(NSDictionary *)params withCallback:(CacheObjectCallback)cb
     {
         assert(_cache);
-        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] uxing_md5hashString];
+        NSString *urlMd5Key = [[NSString combineURLWithBaseURL:key parameters:params] yixiang_md5hashString];
         [_cache removeObjectForKey:urlMd5Key block:^(TMCache *cache, NSString *key, id object) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (cb) {

@@ -7,141 +7,182 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53536BE11FDA30F300619AD3 /* YXCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD21FDA30F300619AD3 /* YXCacheCenter.m */; };
-		53536BE21FDA30F300619AD3 /* YXRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD41FDA30F300619AD3 /* YXRequestApi.m */; };
-		53536BE31FDA30F300619AD3 /* YXBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD51FDA30F300619AD3 /* YXBaseRequestApi.m */; };
-		53536BE41FDA30F300619AD3 /* YXRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD71FDA30F300619AD3 /* YXRequestClient.m */; };
-		53536BE51FDA30F300619AD3 /* YXRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BD91FDA30F300619AD3 /* YXRequestConfig.m */; };
-		53536BE61FDA30F300619AD3 /* YXRequestChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BDD1FDA30F300619AD3 /* YXRequestChain.m */; };
-		53536BE71FDA30F300619AD3 /* YXRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53536BE01FDA30F300619AD3 /* YXRequestManager.m */; };
+		063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */; };
+		53EB68331FDA755700416611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68321FDA755700416611 /* AppDelegate.m */; };
+		53EB68361FDA755700416611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68351FDA755700416611 /* ViewController.m */; };
+		53EB68391FDA755700416611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68371FDA755700416611 /* Main.storyboard */; };
+		53EB683B1FDA755700416611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EB683A1FDA755700416611 /* Assets.xcassets */; };
+		53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EB683C1FDA755700416611 /* LaunchScreen.storyboard */; };
+		53EB68411FDA755800416611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68401FDA755800416611 /* main.m */; };
+		53EB685C1FDA75E900416611 /* ＊.caocaokeji.cn.cer in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68481FDA75E800416611 /* ＊.caocaokeji.cn.cer */; };
+		53EB685D1FDA75E900416611 /* YXRequestManager.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68491FDA75E800416611 /* YXRequestManager.xcassets */; };
+		53EB685E1FDA75E900416611 /* YXCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB684D1FDA75E800416611 /* YXCacheCenter.m */; };
+		53EB685F1FDA75E900416611 /* YXRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB684F1FDA75E800416611 /* YXRequestApi.m */; };
+		53EB68601FDA75E900416611 /* YXBaseRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68501FDA75E800416611 /* YXBaseRequestApi.m */; };
+		53EB68611FDA75E900416611 /* YXRequestClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68521FDA75E800416611 /* YXRequestClient.m */; };
+		53EB68621FDA75E900416611 /* YXRequestConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68541FDA75E800416611 /* YXRequestConfig.m */; };
+		53EB68631FDA75E900416611 /* YXRequestChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68581FDA75E800416611 /* YXRequestChain.m */; };
+		53EB68641FDA75E900416611 /* YXRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB685B1FDA75E800416611 /* YXRequestManager.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		5359A7F11FD81C39001CC605 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		53536BCD1FDA30F300619AD3 /* ＊.caocaokeji.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.caocaokeji.cn.cer"; sourceTree = "<group>"; };
-		53536BCE1FDA30F300619AD3 /* YXRequestManager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManager.xcassets; sourceTree = "<group>"; };
-		53536BD11FDA30F300619AD3 /* YXCacheCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCacheCenter.h; sourceTree = "<group>"; };
-		53536BD21FDA30F300619AD3 /* YXCacheCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCacheCenter.m; sourceTree = "<group>"; };
-		53536BD41FDA30F300619AD3 /* YXRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestApi.m; sourceTree = "<group>"; };
-		53536BD51FDA30F300619AD3 /* YXBaseRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBaseRequestApi.m; sourceTree = "<group>"; };
-		53536BD61FDA30F300619AD3 /* YXRequestChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestChain.h; sourceTree = "<group>"; };
-		53536BD71FDA30F300619AD3 /* YXRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestClient.m; sourceTree = "<group>"; };
-		53536BD81FDA30F300619AD3 /* YXRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestManager.h; sourceTree = "<group>"; };
-		53536BD91FDA30F300619AD3 /* YXRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestConfig.m; sourceTree = "<group>"; };
-		53536BDA1FDA30F300619AD3 /* YXBaseRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBaseRequestApi.h; sourceTree = "<group>"; };
-		53536BDB1FDA30F300619AD3 /* YXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequest.h; sourceTree = "<group>"; };
-		53536BDC1FDA30F300619AD3 /* YXRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestApi.h; sourceTree = "<group>"; };
-		53536BDD1FDA30F300619AD3 /* YXRequestChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestChain.m; sourceTree = "<group>"; };
-		53536BDE1FDA30F300619AD3 /* YXRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestClient.h; sourceTree = "<group>"; };
-		53536BDF1FDA30F300619AD3 /* YXRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestConfig.h; sourceTree = "<group>"; };
-		53536BE01FDA30F300619AD3 /* YXRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestManager.m; sourceTree = "<group>"; };
-		5359A7F31FD81C39001CC605 /* libYXRequestManage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYXRequestManage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManage.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage.release.xcconfig"; sourceTree = "<group>"; };
+		53EB682E1FDA755700416611 /* YXRequestManage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53EB68311FDA755700416611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		53EB68321FDA755700416611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		53EB68341FDA755700416611 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		53EB68351FDA755700416611 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		53EB68381FDA755700416611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53EB683A1FDA755700416611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53EB683D1FDA755700416611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53EB683F1FDA755700416611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EB68401FDA755800416611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53EB68481FDA75E800416611 /* ＊.caocaokeji.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.caocaokeji.cn.cer"; sourceTree = "<group>"; };
+		53EB68491FDA75E800416611 /* YXRequestManager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManager.xcassets; sourceTree = "<group>"; };
+		53EB684C1FDA75E800416611 /* YXCacheCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCacheCenter.h; sourceTree = "<group>"; };
+		53EB684D1FDA75E800416611 /* YXCacheCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCacheCenter.m; sourceTree = "<group>"; };
+		53EB684F1FDA75E800416611 /* YXRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestApi.m; sourceTree = "<group>"; };
+		53EB68501FDA75E800416611 /* YXBaseRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXBaseRequestApi.m; sourceTree = "<group>"; };
+		53EB68511FDA75E800416611 /* YXRequestChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestChain.h; sourceTree = "<group>"; };
+		53EB68521FDA75E800416611 /* YXRequestClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestClient.m; sourceTree = "<group>"; };
+		53EB68531FDA75E800416611 /* YXRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestManager.h; sourceTree = "<group>"; };
+		53EB68541FDA75E800416611 /* YXRequestConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestConfig.m; sourceTree = "<group>"; };
+		53EB68551FDA75E800416611 /* YXBaseRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXBaseRequestApi.h; sourceTree = "<group>"; };
+		53EB68561FDA75E800416611 /* YXRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequest.h; sourceTree = "<group>"; };
+		53EB68571FDA75E800416611 /* YXRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestApi.h; sourceTree = "<group>"; };
+		53EB68581FDA75E800416611 /* YXRequestChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestChain.m; sourceTree = "<group>"; };
+		53EB68591FDA75E800416611 /* YXRequestClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestClient.h; sourceTree = "<group>"; };
+		53EB685A1FDA75E800416611 /* YXRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXRequestConfig.h; sourceTree = "<group>"; };
+		53EB685B1FDA75E800416611 /* YXRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestManager.m; sourceTree = "<group>"; };
+		5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXRequestManage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8C1B84370B0E964EED3480 /* Pods-YXRequestManage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5359A7F01FD81C39001CC605 /* Frameworks */ = {
+		53EB682B1FDA755700416611 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53536BCC1FDA30F300619AD3 /* Assets */ = {
+		53EB68251FDA755700416611 = {
 			isa = PBXGroup;
 			children = (
-				53536BCD1FDA30F300619AD3 /* ＊.caocaokeji.cn.cer */,
-				53536BCE1FDA30F300619AD3 /* YXRequestManager.xcassets */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
-		53536BCF1FDA30F300619AD3 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				53536BD01FDA30F300619AD3 /* YXCache */,
-				53536BD31FDA30F300619AD3 /* YXRequest */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		53536BD01FDA30F300619AD3 /* YXCache */ = {
-			isa = PBXGroup;
-			children = (
-				53536BD11FDA30F300619AD3 /* YXCacheCenter.h */,
-				53536BD21FDA30F300619AD3 /* YXCacheCenter.m */,
-			);
-			path = YXCache;
-			sourceTree = "<group>";
-		};
-		53536BD31FDA30F300619AD3 /* YXRequest */ = {
-			isa = PBXGroup;
-			children = (
-				53536BD41FDA30F300619AD3 /* YXRequestApi.m */,
-				53536BD51FDA30F300619AD3 /* YXBaseRequestApi.m */,
-				53536BD61FDA30F300619AD3 /* YXRequestChain.h */,
-				53536BD71FDA30F300619AD3 /* YXRequestClient.m */,
-				53536BD81FDA30F300619AD3 /* YXRequestManager.h */,
-				53536BD91FDA30F300619AD3 /* YXRequestConfig.m */,
-				53536BDA1FDA30F300619AD3 /* YXBaseRequestApi.h */,
-				53536BDB1FDA30F300619AD3 /* YXRequest.h */,
-				53536BDC1FDA30F300619AD3 /* YXRequestApi.h */,
-				53536BDD1FDA30F300619AD3 /* YXRequestChain.m */,
-				53536BDE1FDA30F300619AD3 /* YXRequestClient.h */,
-				53536BDF1FDA30F300619AD3 /* YXRequestConfig.h */,
-				53536BE01FDA30F300619AD3 /* YXRequestManager.m */,
-			);
-			path = YXRequest;
-			sourceTree = "<group>";
-		};
-		5359A7EA1FD81C39001CC605 = {
-			isa = PBXGroup;
-			children = (
-				5359A7F51FD81C39001CC605 /* YXRequestManage */,
-				5359A7F41FD81C39001CC605 /* Products */,
+				53EB68301FDA755700416611 /* YXRequestManage */,
+				53EB682F1FDA755700416611 /* Products */,
+				FA052C5F1395296030A831B2 /* Pods */,
+				AD296EFAF29EA1136D9CD262 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		5359A7F41FD81C39001CC605 /* Products */ = {
+		53EB682F1FDA755700416611 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5359A7F31FD81C39001CC605 /* libYXRequestManage.a */,
+				53EB682E1FDA755700416611 /* YXRequestManage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5359A7F51FD81C39001CC605 /* YXRequestManage */ = {
+		53EB68301FDA755700416611 /* YXRequestManage */ = {
 			isa = PBXGroup;
 			children = (
-				53536BCC1FDA30F300619AD3 /* Assets */,
-				53536BCF1FDA30F300619AD3 /* Classes */,
+				53EB68471FDA75E800416611 /* Assets */,
+				53EB684A1FDA75E800416611 /* Classes */,
+				53EB68311FDA755700416611 /* AppDelegate.h */,
+				53EB68321FDA755700416611 /* AppDelegate.m */,
+				53EB68341FDA755700416611 /* ViewController.h */,
+				53EB68351FDA755700416611 /* ViewController.m */,
+				53EB68371FDA755700416611 /* Main.storyboard */,
+				53EB683A1FDA755700416611 /* Assets.xcassets */,
+				53EB683C1FDA755700416611 /* LaunchScreen.storyboard */,
+				53EB683F1FDA755700416611 /* Info.plist */,
+				53EB68401FDA755800416611 /* main.m */,
 			);
 			path = YXRequestManage;
+			sourceTree = "<group>";
+		};
+		53EB68471FDA75E800416611 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				53EB68481FDA75E800416611 /* ＊.caocaokeji.cn.cer */,
+				53EB68491FDA75E800416611 /* YXRequestManager.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		53EB684A1FDA75E800416611 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				53EB684B1FDA75E800416611 /* YXCache */,
+				53EB684E1FDA75E800416611 /* YXRequest */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		53EB684B1FDA75E800416611 /* YXCache */ = {
+			isa = PBXGroup;
+			children = (
+				53EB684C1FDA75E800416611 /* YXCacheCenter.h */,
+				53EB684D1FDA75E800416611 /* YXCacheCenter.m */,
+			);
+			path = YXCache;
+			sourceTree = "<group>";
+		};
+		53EB684E1FDA75E800416611 /* YXRequest */ = {
+			isa = PBXGroup;
+			children = (
+				53EB684F1FDA75E800416611 /* YXRequestApi.m */,
+				53EB68501FDA75E800416611 /* YXBaseRequestApi.m */,
+				53EB68511FDA75E800416611 /* YXRequestChain.h */,
+				53EB68521FDA75E800416611 /* YXRequestClient.m */,
+				53EB68531FDA75E800416611 /* YXRequestManager.h */,
+				53EB68541FDA75E800416611 /* YXRequestConfig.m */,
+				53EB68551FDA75E800416611 /* YXBaseRequestApi.h */,
+				53EB68561FDA75E800416611 /* YXRequest.h */,
+				53EB68571FDA75E800416611 /* YXRequestApi.h */,
+				53EB68581FDA75E800416611 /* YXRequestChain.m */,
+				53EB68591FDA75E800416611 /* YXRequestClient.h */,
+				53EB685A1FDA75E800416611 /* YXRequestConfig.h */,
+				53EB685B1FDA75E800416611 /* YXRequestManager.m */,
+			);
+			path = YXRequest;
+			sourceTree = "<group>";
+		};
+		AD296EFAF29EA1136D9CD262 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FA052C5F1395296030A831B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A8C1B84370B0E964EED3480 /* Pods-YXRequestManage.debug.xcconfig */,
+				314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5359A7F21FD81C39001CC605 /* YXRequestManage */ = {
+		53EB682D1FDA755700416611 /* YXRequestManage */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5359A7FC1FD81C39001CC605 /* Build configuration list for PBXNativeTarget "YXRequestManage" */;
+			buildConfigurationList = 53EB68441FDA755800416611 /* Build configuration list for PBXNativeTarget "YXRequestManage" */;
 			buildPhases = (
-				5359A7EF1FD81C39001CC605 /* Sources */,
-				5359A7F01FD81C39001CC605 /* Frameworks */,
-				5359A7F11FD81C39001CC605 /* CopyFiles */,
+				20DFB2F9A894A496270CA986 /* [CP] Check Pods Manifest.lock */,
+				53EB682A1FDA755700416611 /* Sources */,
+				53EB682B1FDA755700416611 /* Frameworks */,
+				53EB682C1FDA755700416611 /* Resources */,
+				200F75745D5ED2BAB3283BCC /* [CP] Embed Pods Frameworks */,
+				1E558EDF89507C2D0C242970 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,60 +190,146 @@
 			);
 			name = YXRequestManage;
 			productName = YXRequestManage;
-			productReference = 5359A7F31FD81C39001CC605 /* libYXRequestManage.a */;
-			productType = "com.apple.product-type.library.static";
+			productReference = 53EB682E1FDA755700416611 /* YXRequestManage.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		5359A7EB1FD81C39001CC605 /* Project object */ = {
+		53EB68261FDA755700416611 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0910;
 				ORGANIZATIONNAME = "郏国上";
 				TargetAttributes = {
-					5359A7F21FD81C39001CC605 = {
+					53EB682D1FDA755700416611 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 5359A7EE1FD81C39001CC605 /* Build configuration list for PBXProject "YXRequestManage" */;
+			buildConfigurationList = 53EB68291FDA755700416611 /* Build configuration list for PBXProject "YXRequestManage" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
-			mainGroup = 5359A7EA1FD81C39001CC605;
-			productRefGroup = 5359A7F41FD81C39001CC605 /* Products */;
+			mainGroup = 53EB68251FDA755700416611;
+			productRefGroup = 53EB682F1FDA755700416611 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5359A7F21FD81C39001CC605 /* YXRequestManage */,
+				53EB682D1FDA755700416611 /* YXRequestManage */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		53EB682C1FDA755700416611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */,
+				53EB685D1FDA75E900416611 /* YXRequestManager.xcassets in Resources */,
+				53EB683B1FDA755700416611 /* Assets.xcassets in Resources */,
+				53EB68391FDA755700416611 /* Main.storyboard in Resources */,
+				53EB685C1FDA75E900416611 /* ＊.caocaokeji.cn.cer in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E558EDF89507C2D0C242970 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		200F75745D5ED2BAB3283BCC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20DFB2F9A894A496270CA986 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		5359A7EF1FD81C39001CC605 /* Sources */ = {
+		53EB682A1FDA755700416611 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53536BE11FDA30F300619AD3 /* YXCacheCenter.m in Sources */,
-				53536BE41FDA30F300619AD3 /* YXRequestClient.m in Sources */,
-				53536BE61FDA30F300619AD3 /* YXRequestChain.m in Sources */,
-				53536BE21FDA30F300619AD3 /* YXRequestApi.m in Sources */,
-				53536BE71FDA30F300619AD3 /* YXRequestManager.m in Sources */,
-				53536BE51FDA30F300619AD3 /* YXRequestConfig.m in Sources */,
-				53536BE31FDA30F300619AD3 /* YXBaseRequestApi.m in Sources */,
+				53EB68611FDA75E900416611 /* YXRequestClient.m in Sources */,
+				53EB685F1FDA75E900416611 /* YXRequestApi.m in Sources */,
+				53EB685E1FDA75E900416611 /* YXCacheCenter.m in Sources */,
+				53EB68601FDA75E900416611 /* YXBaseRequestApi.m in Sources */,
+				53EB68621FDA75E900416611 /* YXRequestConfig.m in Sources */,
+				53EB68631FDA75E900416611 /* YXRequestChain.m in Sources */,
+				53EB68641FDA75E900416611 /* YXRequestManager.m in Sources */,
+				53EB68361FDA755700416611 /* ViewController.m in Sources */,
+				53EB68411FDA755800416611 /* main.m in Sources */,
+				53EB68331FDA755700416611 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		53EB68371FDA755700416611 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EB68381FDA755700416611 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53EB683C1FDA755700416611 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53EB683D1FDA755700416611 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		5359A7FA1FD81C39001CC605 /* Debug */ = {
+		53EB68421FDA755800416611 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,7 +384,7 @@
 			};
 			name = Debug;
 		};
-		5359A7FB1FD81C39001CC605 /* Release */ = {
+		53EB68431FDA755800416611 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -306,26 +433,32 @@
 			};
 			name = Release;
 		};
-		5359A7FD1FD81C39001CC605 /* Debug */ = {
+		53EB68451FDA755800416611 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A8C1B84370B0E964EED3480 /* Pods-YXRequestManage.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P525FR3YV;
-				OTHER_LDFLAGS = "-ObjC";
+				INFOPLIST_FILE = YXRequestManage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		5359A7FE1FD81C39001CC605 /* Release */ = {
+		53EB68461FDA755800416611 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P525FR3YV;
-				OTHER_LDFLAGS = "-ObjC";
+				INFOPLIST_FILE = YXRequestManage/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -333,25 +466,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5359A7EE1FD81C39001CC605 /* Build configuration list for PBXProject "YXRequestManage" */ = {
+		53EB68291FDA755700416611 /* Build configuration list for PBXProject "YXRequestManage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5359A7FA1FD81C39001CC605 /* Debug */,
-				5359A7FB1FD81C39001CC605 /* Release */,
+				53EB68421FDA755800416611 /* Debug */,
+				53EB68431FDA755800416611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5359A7FC1FD81C39001CC605 /* Build configuration list for PBXNativeTarget "YXRequestManage" */ = {
+		53EB68441FDA755800416611 /* Build configuration list for PBXNativeTarget "YXRequestManage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5359A7FD1FD81C39001CC605 /* Debug */,
-				5359A7FE1FD81C39001CC605 /* Release */,
+				53EB68451FDA755800416611 /* Debug */,
+				53EB68461FDA755800416611 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 5359A7EB1FD81C39001CC605 /* Project object */;
+	rootObject = 53EB68261FDA755700416611 /* Project object */;
 }
