@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0106B983AF4B0062977BEA0D /* libPods-YXRequestManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */; };
 		063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */; };
 		538CFF701FDE1FFA007C1FEA /* ＊.YiXiang.cer in Resources */ = {isa = PBXBuildFile; fileRef = 538CFF6F1FDE1FFA007C1FEA /* ＊.YiXiang.cer */; };
 		538CFF721FDE204B007C1FEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538CFF711FDE204B007C1FEA /* Info.plist */; };
@@ -27,7 +28,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXRequestManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManage.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage.release.xcconfig"; sourceTree = "<group>"; };
+		44AE6E95F62B3A27B7A77152 /* Pods-YXRequestManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManager/Pods-YXRequestManager.debug.xcconfig"; sourceTree = "<group>"; };
 		538CFF6F1FDE1FFA007C1FEA /* ＊.YiXiang.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.YiXiang.cer"; sourceTree = "<group>"; };
 		538CFF711FDE204B007C1FEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EB682E1FDA755700416611 /* YXRequestManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +60,7 @@
 		53EB685B1FDA75E800416611 /* YXRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXRequestManager.m; sourceTree = "<group>"; };
 		5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXRequestManage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A8C1B84370B0E964EED3480 /* Pods-YXRequestManage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage.debug.xcconfig"; sourceTree = "<group>"; };
+		D71602C2A1F3309493EFBB57 /* Pods-YXRequestManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManager/Pods-YXRequestManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */,
+				0106B983AF4B0062977BEA0D /* libPods-YXRequestManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -158,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */,
+				14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			children = (
 				7A8C1B84370B0E964EED3480 /* Pods-YXRequestManage.debug.xcconfig */,
 				314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */,
+				44AE6E95F62B3A27B7A77152 /* Pods-YXRequestManager.debug.xcconfig */,
+				D71602C2A1F3309493EFBB57 /* Pods-YXRequestManager.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -256,7 +264,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXRequestManager/Pods-YXRequestManager-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		200F75745D5ED2BAB3283BCC /* [CP] Embed Pods Frameworks */ = {
@@ -271,7 +279,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YXRequestManager/Pods-YXRequestManager-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		20DFB2F9A894A496270CA986 /* [CP] Check Pods Manifest.lock */ = {
@@ -437,7 +445,7 @@
 		};
 		53EB68451FDA755800416611 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7A8C1B84370B0E964EED3480 /* Pods-YXRequestManage.debug.xcconfig */;
+			baseConfigurationReference = 44AE6E95F62B3A27B7A77152 /* Pods-YXRequestManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,7 +460,7 @@
 		};
 		53EB68461FDA755800416611 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */;
+			baseConfigurationReference = D71602C2A1F3309493EFBB57 /* Pods-YXRequestManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -4,7 +4,7 @@ source 'https://github.com/enjoyor-runlu/YiXiangSpec.git'
 
 platform :ios, "8.0"
 
-target 'YXRequestManage' do
+target 'YXRequestManager' do
   # Uncomment this line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
