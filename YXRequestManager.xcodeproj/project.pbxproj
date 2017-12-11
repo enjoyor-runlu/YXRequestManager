@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */; };
+		538CFF701FDE1FFA007C1FEA /* ＊.YiXiang.cer in Resources */ = {isa = PBXBuildFile; fileRef = 538CFF6F1FDE1FFA007C1FEA /* ＊.YiXiang.cer */; };
+		538CFF721FDE204B007C1FEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538CFF711FDE204B007C1FEA /* Info.plist */; };
 		53EB68331FDA755700416611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68321FDA755700416611 /* AppDelegate.m */; };
 		53EB68361FDA755700416611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68351FDA755700416611 /* ViewController.m */; };
 		53EB68391FDA755700416611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68371FDA755700416611 /* Main.storyboard */; };
 		53EB683B1FDA755700416611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EB683A1FDA755700416611 /* Assets.xcassets */; };
 		53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EB683C1FDA755700416611 /* LaunchScreen.storyboard */; };
 		53EB68411FDA755800416611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68401FDA755800416611 /* main.m */; };
-		53EB685C1FDA75E900416611 /* ＊.caocaokeji.cn.cer in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68481FDA75E800416611 /* ＊.caocaokeji.cn.cer */; };
 		53EB685D1FDA75E900416611 /* YXRequestManager.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68491FDA75E800416611 /* YXRequestManager.xcassets */; };
 		53EB685E1FDA75E900416611 /* YXCacheCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB684D1FDA75E800416611 /* YXCacheCenter.m */; };
 		53EB685F1FDA75E900416611 /* YXRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB684F1FDA75E800416611 /* YXRequestApi.m */; };
@@ -27,7 +28,9 @@
 
 /* Begin PBXFileReference section */
 		314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManage.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage.release.xcconfig"; sourceTree = "<group>"; };
-		53EB682E1FDA755700416611 /* YXRequestManage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		538CFF6F1FDE1FFA007C1FEA /* ＊.YiXiang.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.YiXiang.cer"; sourceTree = "<group>"; };
+		538CFF711FDE204B007C1FEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53EB682E1FDA755700416611 /* YXRequestManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EB68311FDA755700416611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		53EB68321FDA755700416611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		53EB68341FDA755700416611 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -35,9 +38,7 @@
 		53EB68381FDA755700416611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53EB683A1FDA755700416611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53EB683D1FDA755700416611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		53EB683F1FDA755700416611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EB68401FDA755800416611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		53EB68481FDA75E800416611 /* ＊.caocaokeji.cn.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.caocaokeji.cn.cer"; sourceTree = "<group>"; };
 		53EB68491FDA75E800416611 /* YXRequestManager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManager.xcassets; sourceTree = "<group>"; };
 		53EB684C1FDA75E800416611 /* YXCacheCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXCacheCenter.h; sourceTree = "<group>"; };
 		53EB684D1FDA75E800416611 /* YXCacheCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXCacheCenter.m; sourceTree = "<group>"; };
@@ -73,7 +74,7 @@
 		53EB68251FDA755700416611 = {
 			isa = PBXGroup;
 			children = (
-				53EB68301FDA755700416611 /* YXRequestManage */,
+				53EB68301FDA755700416611 /* YXRequestManager */,
 				53EB682F1FDA755700416611 /* Products */,
 				FA052C5F1395296030A831B2 /* Pods */,
 				AD296EFAF29EA1136D9CD262 /* Frameworks */,
@@ -83,14 +84,15 @@
 		53EB682F1FDA755700416611 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				53EB682E1FDA755700416611 /* YXRequestManage.app */,
+				53EB682E1FDA755700416611 /* YXRequestManager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		53EB68301FDA755700416611 /* YXRequestManage */ = {
+		53EB68301FDA755700416611 /* YXRequestManager */ = {
 			isa = PBXGroup;
 			children = (
+				538CFF711FDE204B007C1FEA /* Info.plist */,
 				53EB68471FDA75E800416611 /* Assets */,
 				53EB684A1FDA75E800416611 /* Classes */,
 				53EB68311FDA755700416611 /* AppDelegate.h */,
@@ -100,16 +102,15 @@
 				53EB68371FDA755700416611 /* Main.storyboard */,
 				53EB683A1FDA755700416611 /* Assets.xcassets */,
 				53EB683C1FDA755700416611 /* LaunchScreen.storyboard */,
-				53EB683F1FDA755700416611 /* Info.plist */,
 				53EB68401FDA755800416611 /* main.m */,
 			);
-			path = YXRequestManage;
+			path = YXRequestManager;
 			sourceTree = "<group>";
 		};
 		53EB68471FDA75E800416611 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				53EB68481FDA75E800416611 /* ＊.caocaokeji.cn.cer */,
+				538CFF6F1FDE1FFA007C1FEA /* ＊.YiXiang.cer */,
 				53EB68491FDA75E800416611 /* YXRequestManager.xcassets */,
 			);
 			path = Assets;
@@ -173,9 +174,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		53EB682D1FDA755700416611 /* YXRequestManage */ = {
+		53EB682D1FDA755700416611 /* YXRequestManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 53EB68441FDA755800416611 /* Build configuration list for PBXNativeTarget "YXRequestManage" */;
+			buildConfigurationList = 53EB68441FDA755800416611 /* Build configuration list for PBXNativeTarget "YXRequestManager" */;
 			buildPhases = (
 				20DFB2F9A894A496270CA986 /* [CP] Check Pods Manifest.lock */,
 				53EB682A1FDA755700416611 /* Sources */,
@@ -188,9 +189,9 @@
 			);
 			dependencies = (
 			);
-			name = YXRequestManage;
+			name = YXRequestManager;
 			productName = YXRequestManage;
-			productReference = 53EB682E1FDA755700416611 /* YXRequestManage.app */;
+			productReference = 53EB682E1FDA755700416611 /* YXRequestManager.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +209,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 53EB68291FDA755700416611 /* Build configuration list for PBXProject "YXRequestManage" */;
+			buildConfigurationList = 53EB68291FDA755700416611 /* Build configuration list for PBXProject "YXRequestManager" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,7 +222,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53EB682D1FDA755700416611 /* YXRequestManage */,
+				53EB682D1FDA755700416611 /* YXRequestManager */,
 			);
 		};
 /* End PBXProject section */
@@ -233,9 +234,10 @@
 			files = (
 				53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */,
 				53EB685D1FDA75E900416611 /* YXRequestManager.xcassets in Resources */,
+				538CFF721FDE204B007C1FEA /* Info.plist in Resources */,
+				538CFF701FDE1FFA007C1FEA /* ＊.YiXiang.cer in Resources */,
 				53EB683B1FDA755700416611 /* Assets.xcassets in Resources */,
 				53EB68391FDA755700416611 /* Main.storyboard in Resources */,
-				53EB685C1FDA75E900416611 /* ＊.caocaokeji.cn.cer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,7 +442,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P525FR3YV;
-				INFOPLIST_FILE = YXRequestManage/Info.plist;
+				INFOPLIST_FILE = YXRequestManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -455,7 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5P525FR3YV;
-				INFOPLIST_FILE = YXRequestManage/Info.plist;
+				INFOPLIST_FILE = YXRequestManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -466,7 +468,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		53EB68291FDA755700416611 /* Build configuration list for PBXProject "YXRequestManage" */ = {
+		53EB68291FDA755700416611 /* Build configuration list for PBXProject "YXRequestManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53EB68421FDA755800416611 /* Debug */,
@@ -475,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53EB68441FDA755800416611 /* Build configuration list for PBXNativeTarget "YXRequestManage" */ = {
+		53EB68441FDA755800416611 /* Build configuration list for PBXNativeTarget "YXRequestManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				53EB68451FDA755800416611 /* Debug */,
