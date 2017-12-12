@@ -91,6 +91,12 @@
     if (self) {
         self.sessionManager = [AFHTTPSessionManager manager];
         self.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript",@"text/plain", nil];
+        [self.sessionManager.requestSerializer setValue:@"1" forHTTPHeaderField:@"platform"];
+        NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"loginToken"];
+        if (token && ([token isKindOfClass:[NSString class]]) &&(token.length > 0))
+        {
+            [self.sessionManager.requestSerializer setValue:token forHTTPHeaderField:@"token"];
+        }
         [self configurationHttpsRequest];
         _semaphore = dispatch_semaphore_create(1);
         _requestCostTimeDic = [NSMutableDictionary dictionary];
@@ -395,6 +401,8 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     }
     if (error) {
         defaultError = error;
+        LogDebug(@"error.code:%ld\n error.userInfo:%@\n error:%@\n error.domain:%@\n", (long)(error.code),error.userInfo, error,error.domain);
+        
     } else if (serializationError) {
         defaultError = serializationError;
     } else {
