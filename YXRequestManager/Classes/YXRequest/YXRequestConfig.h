@@ -36,7 +36,7 @@ typedef void(^GeneralHandler)(NSDictionary *result, NSError *error);
 //errorMsg处理handler
 @property (nonatomic, copy) GeneralHandler errorMsgHandler;
 
-//token失效,账号被提出处理handler
+//token失效,账号被踢出处理handler
 @property (nonatomic, copy) GeneralHandler logoutAccountHandler;
 
 //token更换处理handler

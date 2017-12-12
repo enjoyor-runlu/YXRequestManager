@@ -16,7 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - SAMKeychain (1.5.2)
   - TMCache (2.1.0)
-  - YXFDCategories (0.0.5):
+  - YXFDCategories (0.0.6):
     - SAMKeychain
 
 DEPENDENCIES:
@@ -28,7 +28,7 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
   TMCache: 95ebcc9b3c7e90fb5fd8fc3036cba3aa781c9bed
-  YXFDCategories: 530b064286e5da8de1bea99d6d60186e3cedbda6
+  YXFDCategories: 406c96a31148f79a52828fbc01c1eb8031be6df3
 
 PODFILE CHECKSUM: 44cfe82df8c33e2e787fd78ab2d9a2f66edf620a
 
