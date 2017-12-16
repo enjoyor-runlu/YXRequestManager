@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXRequestManager'
-  s.version          = '1.0.6'
+  s.version          = '1.0.7'
   s.summary          = 'YXRequestManager.'
 
 # This description is used to generate tags and improve search results.
@@ -34,7 +34,7 @@ TODO: Add long description of the pod here.
 #s.source_files  = "YXRequestManager", "YXRequestManager/**/*.{h,m}"
 
    s.resource_bundles = {
-      'YXRequestManager' => ['YXRequestManager/Assets.xcassets/common_icon_loading.imageset/*.png']
+      'YXRequestManager' => ['YXRequestManager/Assets/common_icon_loading/*.png']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
