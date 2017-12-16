@@ -10,8 +10,7 @@
 		0106B983AF4B0062977BEA0D /* libPods-YXRequestManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */; };
 		53607D401FE2A72E0034EAC8 /* YXLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */; };
 		537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537AC60D1FE518DE0017F341 /* Default-568h@2x.png */; };
-		537AC6111FE51EB40017F341 /* common_icon_loading@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537AC60F1FE51EB30017F341 /* common_icon_loading@3x.png */; };
-		537AC6121FE51EB40017F341 /* common_icon_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537AC6101FE51EB40017F341 /* common_icon_loading@2x.png */; };
+		537AC6141FE521CE0017F341 /* YXRequestManagerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */; };
 		53EB68331FDA755700416611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68321FDA755700416611 /* AppDelegate.m */; };
 		53EB68361FDA755700416611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68351FDA755700416611 /* ViewController.m */; };
 		53EB68391FDA755700416611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68371FDA755700416611 /* Main.storyboard */; };
@@ -34,8 +33,7 @@
 		53607D3B1FE2A72E0034EAC8 /* YXLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoadingView.h; sourceTree = "<group>"; };
 		53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoadingView.m; sourceTree = "<group>"; };
 		537AC60D1FE518DE0017F341 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		537AC60F1FE51EB30017F341 /* common_icon_loading@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_icon_loading@3x.png"; sourceTree = "<group>"; };
-		537AC6101FE51EB40017F341 /* common_icon_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "common_icon_loading@2x.png"; sourceTree = "<group>"; };
+		537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManagerAssets.xcassets; sourceTree = "<group>"; };
 		538CFF711FDE204B007C1FEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EB682E1FDA755700416611 /* YXRequestManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EB68311FDA755700416611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -100,8 +98,6 @@
 		53EB68301FDA755700416611 /* YXRequestManager */ = {
 			isa = PBXGroup;
 			children = (
-				537AC6101FE51EB40017F341 /* common_icon_loading@2x.png */,
-				537AC60F1FE51EB30017F341 /* common_icon_loading@3x.png */,
 				538CFF711FDE204B007C1FEA /* Info.plist */,
 				53EB684A1FDA75E800416611 /* Classes */,
 				53EB68311FDA755700416611 /* AppDelegate.h */,
@@ -119,6 +115,7 @@
 		53EB684A1FDA75E800416611 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */,
 				53EB684B1FDA75E800416611 /* YXCache */,
 				53EB684E1FDA75E800416611 /* YXRequest */,
 			);
@@ -238,9 +235,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */,
-				537AC6111FE51EB40017F341 /* common_icon_loading@3x.png in Resources */,
+				537AC6141FE521CE0017F341 /* YXRequestManagerAssets.xcassets in Resources */,
 				537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */,
-				537AC6121FE51EB40017F341 /* common_icon_loading@2x.png in Resources */,
 				53EB683B1FDA755700416611 /* Assets.xcassets in Resources */,
 				53EB68391FDA755700416611 /* Main.storyboard in Resources */,
 			);
