@@ -8,11 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0106B983AF4B0062977BEA0D /* libPods-YXRequestManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */; };
-		063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A37E63D88BD606DAED3CCA8 /* libPods-YXRequestManage.a */; };
 		53607D401FE2A72E0034EAC8 /* YXLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */; };
-		53607D411FE2A72E0034EAC8 /* YXRequestManager.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53607D3E1FE2A72E0034EAC8 /* YXRequestManager.xcassets */; };
-		53607D421FE2A72E0034EAC8 /* ＊.YiXiang.cer in Resources */ = {isa = PBXBuildFile; fileRef = 53607D3F1FE2A72E0034EAC8 /* ＊.YiXiang.cer */; };
-		538CFF721FDE204B007C1FEA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 538CFF711FDE204B007C1FEA /* Info.plist */; };
+		537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537AC60D1FE518DE0017F341 /* Default-568h@2x.png */; };
 		53EB68331FDA755700416611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68321FDA755700416611 /* AppDelegate.m */; };
 		53EB68361FDA755700416611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68351FDA755700416611 /* ViewController.m */; };
 		53EB68391FDA755700416611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53EB68371FDA755700416611 /* Main.storyboard */; };
@@ -34,8 +31,7 @@
 		44AE6E95F62B3A27B7A77152 /* Pods-YXRequestManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManager/Pods-YXRequestManager.debug.xcconfig"; sourceTree = "<group>"; };
 		53607D3B1FE2A72E0034EAC8 /* YXLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoadingView.h; sourceTree = "<group>"; };
 		53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoadingView.m; sourceTree = "<group>"; };
-		53607D3E1FE2A72E0034EAC8 /* YXRequestManager.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManager.xcassets; sourceTree = "<group>"; };
-		53607D3F1FE2A72E0034EAC8 /* ＊.YiXiang.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "＊.YiXiang.cer"; sourceTree = "<group>"; };
+		537AC60D1FE518DE0017F341 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		538CFF711FDE204B007C1FEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EB682E1FDA755700416611 /* YXRequestManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53EB68311FDA755700416611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				063E4134B9A58328C636AF20 /* libPods-YXRequestManage.a in Frameworks */,
 				0106B983AF4B0062977BEA0D /* libPods-YXRequestManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,18 +74,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53607D3D1FE2A72E0034EAC8 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				53607D3E1FE2A72E0034EAC8 /* YXRequestManager.xcassets */,
-				53607D3F1FE2A72E0034EAC8 /* ＊.YiXiang.cer */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		53EB68251FDA755700416611 = {
 			isa = PBXGroup;
 			children = (
+				537AC60D1FE518DE0017F341 /* Default-568h@2x.png */,
 				53EB68301FDA755700416611 /* YXRequestManager */,
 				53EB682F1FDA755700416611 /* Products */,
 				FA052C5F1395296030A831B2 /* Pods */,
@@ -144,7 +131,6 @@
 		53EB684E1FDA75E800416611 /* YXRequest */ = {
 			isa = PBXGroup;
 			children = (
-				53607D3D1FE2A72E0034EAC8 /* Assets */,
 				53607D3B1FE2A72E0034EAC8 /* YXLoadingView.h */,
 				53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */,
 				53EB684F1FDA75E800416611 /* YXRequestApi.m */,
@@ -213,7 +199,7 @@
 		53EB68261FDA755700416611 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "郏国上";
 				TargetAttributes = {
 					53EB682D1FDA755700416611 = {
@@ -246,10 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */,
-				53607D411FE2A72E0034EAC8 /* YXRequestManager.xcassets in Resources */,
-				538CFF721FDE204B007C1FEA /* Info.plist in Resources */,
+				537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */,
 				53EB683B1FDA755700416611 /* Assets.xcassets in Resources */,
-				53607D421FE2A72E0034EAC8 /* ＊.YiXiang.cer in Resources */,
 				53EB68391FDA755700416611 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -458,7 +442,8 @@
 				DEVELOPMENT_TEAM = 5P525FR3YV;
 				INFOPLIST_FILE = YXRequestManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManage;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,7 +458,7 @@
 				DEVELOPMENT_TEAM = 5P525FR3YV;
 				INFOPLIST_FILE = YXRequestManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManage;
+				PRODUCT_BUNDLE_IDENTIFIER = YiXiang.YXRequestManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -71,7 +71,7 @@ static YXLoadingView *loadingView = nil;
 - (UIImageView *)rotationView
 {
     if (!_rotationView) {
-        _rotationView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 45.f, 45.f)];
+        _rotationView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 24.f, 24.f)];
         _rotationView.center = CGPointMake(50.f, 50.f);
         UIImage *image = [UIImage imageNamed:@"common_icon_loading"];
         _rotationView.image = image;
@@ -91,7 +91,7 @@ static YXLoadingView *loadingView = nil;
 - (void)doAnimation
 {
     self.floatingView.alpha = 0.f;
-    [UIView animateWithDuration:0.3f animations:^{
+    [UIView animateWithDuration:.3f animations:^{
         self.floatingView.alpha = 0.9f;
     }];
     [self.iWindow addSubview:self];
@@ -104,7 +104,7 @@ static YXLoadingView *loadingView = nil;
     animation.toValue = [ NSValue valueWithCATransform3D:
                          
                          CATransform3DMakeRotation(M_PI, 0.0, 0.0, 1.0)];
-    animation.duration = 0.4;
+    animation.duration = 0.5;
     //旋转效果累计，先转180度，接着再旋转180度，从而实现360旋转
     animation.cumulative = YES;
     animation.repeatCount = 1000;

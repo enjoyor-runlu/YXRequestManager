@@ -91,12 +91,6 @@
     if (self) {
         self.sessionManager = [AFHTTPSessionManager manager];
         self.sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", @"text/json", @"text/javascript",@"text/plain", nil];
-        [self.sessionManager.requestSerializer setValue:@"1" forHTTPHeaderField:@"platform"];
-        NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"loginToken"];
-        if (token && ([token isKindOfClass:[NSString class]]) &&(token.length > 0))
-        {
-            [self.sessionManager.requestSerializer setValue:token forHTTPHeaderField:@"token"];
-        }
         [self configurationHttpsRequest];
         _semaphore = dispatch_semaphore_create(1);
         _requestCostTimeDic = [NSMutableDictionary dictionary];
@@ -129,6 +123,12 @@
         requestSerializer = [AFHTTPRequestSerializer serializer];
     } else if (requestApi.requestSerializerType == YXRequestSerializerTypeJSON) {
         requestSerializer = [AFJSONRequestSerializer serializer];
+    }
+    [requestSerializer setValue:@"1" forHTTPHeaderField:@"platform"];
+    NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"loginToken"];
+    if (token && ([token isKindOfClass:[NSString class]]) &&(token.length > 0))
+    {
+        [requestSerializer setValue:token forHTTPHeaderField:@"token"];
     }
     requestSerializer.timeoutInterval = requestApi.timeoutInterval;
     
@@ -375,7 +375,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     [self.requestCostTimeDic removeObjectForKey:@(task.taskIdentifier)];
     Unlock();
     double costTime = (CFAbsoluteTimeGetCurrent() - requestStartTime.doubleValue) * 1000;
-    LogDebug(@"task.url : %@ [%@ms]", [NSString stringWithFormat:@"%@", task.currentRequest.URL], @(costTime));
+    LogDebug(@"task.url : %@ [%@ms];\ncurrentRequest.allHTTPHeaderFields:%@;\nresponseObject:%@", [NSString stringWithFormat:@"%@", task.currentRequest.URL], @(costTime),task.currentRequest.allHTTPHeaderFields,responseObject);
     if (isDownload) {
         if (error) {
             if (completeHandler) {
