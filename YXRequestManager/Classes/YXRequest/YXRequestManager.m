@@ -410,7 +410,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         if ([jsonDic containKey:@"returnCode"] && (([jsonCode isKindOfClass:[NSString class]] && [jsonCode isEqualToString:@"200"]) || ([jsonCode isKindOfClass:[NSNumber class]] && [[jsonCode stringValue] isEqualToString:@"200"]))) {//表示成功
             if (!jsonDic)
             {
-                jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"dataKey"];
+                jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"data"];
             }
             else if ([jsonDic containKey:@"data"])
             {
@@ -426,7 +426,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
                 }
                 else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
                 {
-                    jsonDic = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"dataKey"];
+                    jsonDic = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
                 }
                 else {
                     defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
