@@ -421,7 +421,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
                 else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSArray class]])
                 {
                     NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-                    [dic setSafeObject:jsonDic forKey:@"list"];
+                    [dic setSafeObject:jsonDic forKey:@"data"];
                     jsonDic = dic;
                 }
                 else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
