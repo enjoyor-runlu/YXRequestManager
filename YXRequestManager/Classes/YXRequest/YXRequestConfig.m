@@ -33,13 +33,13 @@
 {
     self = [super init];
     if (self) {
-        self.baseURL = @"https://grayhttp.caocaokeji.cn/caocao/";
-        
         self.needHTTPS = NO;
 #ifdef DEBUG
         self.debugEnabled = YES;
+        self.baseURL = @"http://ce.yixiang.1-joy.com/";
 #else
         self.debugEnabled = NO;
+        self.baseURL = @"https://yixiang.1-joy.com/";
 #endif
         self.timeOffset = 0;
     }

@@ -19,6 +19,7 @@ static YXLoadingView *loadingView = nil;
 @property (nonatomic, strong) UIImageView *rotationView;//旋转view
 
 @property (nonatomic, strong) UIWindow *iWindow;//Window
+@property (nonatomic, assign) BOOL showClearHUDFlag;
 
 @end
 
@@ -85,6 +86,20 @@ static YXLoadingView *loadingView = nil;
         YXLoadingView *onLoadingView = [[YXLoadingView alloc] init];
         loadingView = onLoadingView;
     }
+    loadingView.showClearHUDFlag = NO;
+    loadingView.bottomView.hidden = NO;
+    loadingView.floatingView.alpha = 0.9f;
+    [loadingView doAnimation];
+}
++ (void)showClearHUD
+{
+    if (!loadingView) {
+        YXLoadingView *onLoadingView = [[YXLoadingView alloc] init];
+        loadingView = onLoadingView;
+    }
+    loadingView.showClearHUDFlag = YES;
+    loadingView.bottomView.hidden = YES;
+    loadingView.floatingView.alpha = 0.0f;
     [loadingView doAnimation];
 }
 
@@ -92,7 +107,14 @@ static YXLoadingView *loadingView = nil;
 {
     self.floatingView.alpha = 0.f;
     [UIView animateWithDuration:.3f animations:^{
-        self.floatingView.alpha = 0.9f;
+        if(self.showClearHUDFlag)
+        {
+            self.floatingView.alpha = 0.0f;
+        }
+        else
+        {
+            self.floatingView.alpha = 0.9f;
+        }
     }];
     [self.iWindow addSubview:self];
     [self.iWindow makeKeyAndVisible];

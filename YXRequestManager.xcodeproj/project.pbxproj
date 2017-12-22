@@ -134,21 +134,21 @@
 		53EB684E1FDA75E800416611 /* YXRequest */ = {
 			isa = PBXGroup;
 			children = (
+				53EB68561FDA75E800416611 /* YXRequest.h */,
+				53EB68531FDA75E800416611 /* YXRequestManager.h */,
+				53EB685B1FDA75E800416611 /* YXRequestManager.m */,
 				53607D3B1FE2A72E0034EAC8 /* YXLoadingView.h */,
 				53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */,
+				53EB68571FDA75E800416611 /* YXRequestApi.h */,
 				53EB684F1FDA75E800416611 /* YXRequestApi.m */,
+				53EB68551FDA75E800416611 /* YXBaseRequestApi.h */,
 				53EB68501FDA75E800416611 /* YXBaseRequestApi.m */,
 				53EB68511FDA75E800416611 /* YXRequestChain.h */,
-				53EB68521FDA75E800416611 /* YXRequestClient.m */,
-				53EB68531FDA75E800416611 /* YXRequestManager.h */,
-				53EB68541FDA75E800416611 /* YXRequestConfig.m */,
-				53EB68551FDA75E800416611 /* YXBaseRequestApi.h */,
-				53EB68561FDA75E800416611 /* YXRequest.h */,
-				53EB68571FDA75E800416611 /* YXRequestApi.h */,
 				53EB68581FDA75E800416611 /* YXRequestChain.m */,
 				53EB68591FDA75E800416611 /* YXRequestClient.h */,
+				53EB68521FDA75E800416611 /* YXRequestClient.m */,
 				53EB685A1FDA75E800416611 /* YXRequestConfig.h */,
-				53EB685B1FDA75E800416611 /* YXRequestManager.m */,
+				53EB68541FDA75E800416611 /* YXRequestConfig.m */,
 			);
 			path = YXRequest;
 			sourceTree = "<group>";

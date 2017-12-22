@@ -156,7 +156,15 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     [self validateProperty:requestApi];
         
     //判断是否需要展示提示框
-    if (requestApi.showHUD) {
+    if (requestApi.showClearHUD) {
+        requestApi.setShowHUD(NO);
+        if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+            ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(showClearHUD));
+        } else {
+            NSCAssert(NO, @"请配置HUD类名");
+        }
+    }
+    else if (requestApi.showHUD) {
         if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
             ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(show));
         } else {

@@ -11,6 +11,7 @@
 @interface YXLoadingView : UIView
 
 + (void)show;
++ (void)showClearHUD;
 
 + (void)hide;
 

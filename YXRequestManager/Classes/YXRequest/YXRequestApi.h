@@ -35,6 +35,10 @@
  */
 @property (nonatomic, assign, readonly) BOOL              showHUD;
 /**
+ 是否展示透明加载框,默认不展示
+ */
+@property (nonatomic, assign, readonly) BOOL              showClearHUD;
+/**
  是否需要缓存数据,默认不需要
  */
 @property (nonatomic, assign, readonly) BOOL              needCache;

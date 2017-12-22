@@ -28,6 +28,11 @@
 //是否展示加载框
 @property (nonatomic, assign, readwrite) BOOL              showHUD;
 
+/**
+ 是否展示透明加载框,默认不展示
+ */
+@property (nonatomic, assign, readwrite) BOOL              showClearHUD;
+
 //是否需要缓存数据
 @property (nonatomic, assign, readwrite) BOOL              needCache;
 
@@ -47,9 +52,10 @@
 {
     self = [super init];
     if (self) {
-        self.requestMethodType = YX_Request_GET;
+        self.requestMethodType = YX_Request_POST;
         self.timeoutInterval = 20;
         self.showHUD = YES;
+        self.showClearHUD = NO;
         self.needCache = NO;
         self.allowConcurrentExecution = NO;
     }
@@ -126,6 +132,14 @@
 {
     return ^(BOOL showHUD){
         self.showHUD = showHUD;
+        return self;
+    };
+}
+
+- (YXRequestApi *(^)(BOOL showClearHUD))setShowClearHUD
+{
+    return ^(BOOL showClearHUD){
+        self.showClearHUD = showClearHUD;
         return self;
     };
 }
