@@ -82,6 +82,10 @@
  */
 - (YXRequestApi *(^)(BOOL showHUD))setShowHUD;
 /**
+ 设置接口是否展示透明菊花
+ */
+- (YXRequestApi *(^)(BOOL showClearHUD))setShowClearHUD;
+/**
  设置接口是否需要缓存
  */
 - (YXRequestApi *(^)(BOOL needCache))setNeedCache;
