@@ -360,6 +360,21 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     return dataTask;
 }
 
+-(NSError *)checkLogoutError:(NSError *)error
+{
+    NSError *logoutError = [NSError errorWithDomain:@"" code:error.code userInfo:nil];
+    if(error.code == 401)
+    {
+        return logoutError;
+    }
+    NSString *notice = error.domain;
+    if((error.code == 0) && notice && ![notice isEqualToString:@"<null>"] && ([notice rangeOfString:@"登录"].location != NSNotFound))
+    {
+        return logoutError;
+    }
+    return error;
+}
+
 #pragma mark - 处理请求结果,这个地方可以做返回数据的校验
 - (void)handleRequestApi:(YXRequestApi *)requestApi
              sessionTask:(NSURLSessionTask *)task
@@ -379,7 +394,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     if (isDownload) {
         if (error) {
             if (completeHandler) {
-                completeHandler(nil, error);
+                completeHandler(nil, [self checkLogoutError:error]);
             }
         } else {
             completeHandler(@{@"data":@{@"filePath":responseObject?responseObject:@""}}, nil);
@@ -673,6 +688,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
             error = defaultError;
             break;
     }
+    error = [self checkLogoutError:error];
     return error;
 }
 
