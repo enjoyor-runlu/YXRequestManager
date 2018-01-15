@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0106B983AF4B0062977BEA0D /* libPods-YXRequestManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */; };
-		53220D61200C81DF00ADEBAD /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D5B200C81DE00ADEBAD /* NSString+Hash.m */; };
-		53220D62200C81DF00ADEBAD /* AESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D5C200C81DE00ADEBAD /* AESTool.m */; };
-		53220D63200C81DF00ADEBAD /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D5D200C81DE00ADEBAD /* NSData+Encryption.m */; };
+		53220D6B200C87EC00ADEBAD /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D65200C87EC00ADEBAD /* NSString+Hash.m */; };
+		53220D6C200C87EC00ADEBAD /* AESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D66200C87EC00ADEBAD /* AESTool.m */; };
+		53220D6D200C87EC00ADEBAD /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D67200C87EC00ADEBAD /* NSData+Encryption.m */; };
 		53607D401FE2A72E0034EAC8 /* YXLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */; };
 		537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537AC60D1FE518DE0017F341 /* Default-568h@2x.png */; };
 		537AC6141FE521CE0017F341 /* YXRequestManagerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */; };
@@ -33,12 +33,12 @@
 		14E296B08717D6F54B329F69 /* libPods-YXRequestManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YXRequestManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		314DEF5C30152972C2509C58 /* Pods-YXRequestManage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManage.release.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManage/Pods-YXRequestManage.release.xcconfig"; sourceTree = "<group>"; };
 		44AE6E95F62B3A27B7A77152 /* Pods-YXRequestManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YXRequestManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YXRequestManager/Pods-YXRequestManager.debug.xcconfig"; sourceTree = "<group>"; };
-		53220D5B200C81DE00ADEBAD /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
-		53220D5C200C81DE00ADEBAD /* AESTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESTool.m; sourceTree = "<group>"; };
-		53220D5D200C81DE00ADEBAD /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
-		53220D5E200C81DE00ADEBAD /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
-		53220D5F200C81DE00ADEBAD /* AESTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESTool.h; sourceTree = "<group>"; };
-		53220D60200C81DE00ADEBAD /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
+		53220D65200C87EC00ADEBAD /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		53220D66200C87EC00ADEBAD /* AESTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESTool.m; sourceTree = "<group>"; };
+		53220D67200C87EC00ADEBAD /* NSData+Encryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Encryption.m"; sourceTree = "<group>"; };
+		53220D68200C87EC00ADEBAD /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		53220D69200C87EC00ADEBAD /* AESTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESTool.h; sourceTree = "<group>"; };
+		53220D6A200C87EC00ADEBAD /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
 		53607D3B1FE2A72E0034EAC8 /* YXLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoadingView.h; sourceTree = "<group>"; };
 		53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoadingView.m; sourceTree = "<group>"; };
 		537AC60D1FE518DE0017F341 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -85,15 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		53220D5A200C81DE00ADEBAD /* AESCategory */ = {
+		53220D64200C87EC00ADEBAD /* AESCategory */ = {
 			isa = PBXGroup;
 			children = (
-				53220D5B200C81DE00ADEBAD /* NSString+Hash.m */,
-				53220D5C200C81DE00ADEBAD /* AESTool.m */,
-				53220D5D200C81DE00ADEBAD /* NSData+Encryption.m */,
-				53220D5E200C81DE00ADEBAD /* NSString+Hash.h */,
-				53220D5F200C81DE00ADEBAD /* AESTool.h */,
-				53220D60200C81DE00ADEBAD /* NSData+Encryption.h */,
+				53220D65200C87EC00ADEBAD /* NSString+Hash.m */,
+				53220D66200C87EC00ADEBAD /* AESTool.m */,
+				53220D67200C87EC00ADEBAD /* NSData+Encryption.m */,
+				53220D68200C87EC00ADEBAD /* NSString+Hash.h */,
+				53220D69200C87EC00ADEBAD /* AESTool.h */,
+				53220D6A200C87EC00ADEBAD /* NSData+Encryption.h */,
 			);
 			path = AESCategory;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 		53EB684A1FDA75E800416611 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				53220D5A200C81DE00ADEBAD /* AESCategory */,
+				53220D64200C87EC00ADEBAD /* AESCategory */,
 				537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */,
 				53EB684B1FDA75E800416611 /* YXCache */,
 				53EB684E1FDA75E800416611 /* YXRequest */,
@@ -321,17 +321,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				53EB68611FDA75E900416611 /* YXRequestClient.m in Sources */,
-				53220D61200C81DF00ADEBAD /* NSString+Hash.m in Sources */,
+				53220D6B200C87EC00ADEBAD /* NSString+Hash.m in Sources */,
 				53EB685F1FDA75E900416611 /* YXRequestApi.m in Sources */,
 				53EB685E1FDA75E900416611 /* YXCacheCenter.m in Sources */,
 				53EB68601FDA75E900416611 /* YXBaseRequestApi.m in Sources */,
 				53EB68621FDA75E900416611 /* YXRequestConfig.m in Sources */,
 				53EB68631FDA75E900416611 /* YXRequestChain.m in Sources */,
-				53220D62200C81DF00ADEBAD /* AESTool.m in Sources */,
+				53220D6C200C87EC00ADEBAD /* AESTool.m in Sources */,
 				53EB68641FDA75E900416611 /* YXRequestManager.m in Sources */,
 				53EB68361FDA755700416611 /* ViewController.m in Sources */,
 				53EB68411FDA755800416611 /* main.m in Sources */,
-				53220D63200C81DF00ADEBAD /* NSData+Encryption.m in Sources */,
+				53220D6D200C87EC00ADEBAD /* NSData+Encryption.m in Sources */,
 				53607D401FE2A72E0034EAC8 /* YXLoadingView.m in Sources */,
 				53EB68331FDA755700416611 /* AppDelegate.m in Sources */,
 			);

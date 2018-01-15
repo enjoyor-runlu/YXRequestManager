@@ -30,9 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = "YXCache", "YXRequestManager/YXCache/*.{h,m}"
-  s.source_files = "YXRequest", "YXRequestManager/YXRequest/*.{h,m}"
-  s.source_files = "AESCategory", "YXRequestManager/AESCategory/*.{h,m}"
+  s.source_files = 'YXCache', 'YXRequestManager/Classes/YXCache/*.{h,m}'
+  s.source_files = 'YXRequest', 'YXRequestManager/Classes/YXRequest/*.{h,m}'
+  s.source_files = 'AESCategory', 'YXRequestManager/Classes/AESCategory/*.{h,m}'
 #s.source_files  = "YXRequestManager", "YXRequestManager/**/*.{h,m}"
 
    s.resource_bundles = {
