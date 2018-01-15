@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXRequestManager'
-  s.version          = '1.1.4'
+  s.version          = '1.1.5'
   s.summary          = 'YXRequestManager.'
 
 # This description is used to generate tags and improve search results.
@@ -30,7 +30,9 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'YXRequestManager/Classes/**/*.{h,m}'
+  s.source_files = "YXCache", "YXRequestManager/YXCache/*.{h,m}"
+  s.source_files = "YXRequest", "YXRequestManager/YXRequest/*.{h,m}"
+  s.source_files = "AESCategory", "YXRequestManager/AESCategory/*.{h,m}"
 #s.source_files  = "YXRequestManager", "YXRequestManager/**/*.{h,m}"
 
    s.resource_bundles = {
