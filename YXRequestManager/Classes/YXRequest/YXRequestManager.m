@@ -5,7 +5,7 @@
 //  Created by jiaguoshang on 2017/10/31.
 //
 //
-
+#import "NSData+Encryption.h"
 #import "YXRequestManager.h"
 #import "YXRequestConfig.h"
 #import "YXRequestApi.h"
@@ -29,6 +29,7 @@
 
 #define ResponseDataFormatErrorCode   -1111111111
 #define SpecialKeyValue @"1234567890"
+static NSString *const bocKeys = @"c6091428885d59621768176088293d95";
 
 @interface NSDictionary (CheckSafty)
 
@@ -441,7 +442,48 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
                 }
                 else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
                 {
-                    jsonDic = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
+                    BOOL secure = [[jsonDic safeObjectForKey:@"secure"] boolValue];
+                    if(secure)
+                    {
+                        NSString *content = [jsonDic safeObjectForKey:@"data"];
+                        NSData *decryptionData = [[NSData alloc]initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
+                        NSData *contentData = [decryptionData AES256NewDecryptWithKey:bocKeys];
+                        NSDictionary *contentJSON = [NSJSONSerialization JSONObjectWithData:contentData options:NSJSONReadingMutableContainers error:nil];
+                        NSString *contentJsonString = [[NSString alloc]initWithData:contentData encoding:NSUTF8StringEncoding];
+                        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+                        if (content.length==0) {
+                            [dict setObject:@"" forKey:@"data"];
+                        } else {
+                            if (contentJSON == nil) {
+                                if(contentJsonString == nil)
+                                {
+                                    [dict setObject:@"" forKey:@"data"];
+                                }
+                                else
+                                {
+                                    [dict setObject:contentJsonString forKey:@"data"];
+                                }
+                            } else {
+                                if(contentJSON == nil)
+                                {
+                                    [dict setObject:@"" forKey:@"data"];
+                                }
+                                else if(contentJSON && [contentJSON isKindOfClass:[NSDictionary class]])
+                                {
+                                    dict = [NSMutableDictionary dictionaryWithDictionary:contentJSON];
+                                }
+                                else
+                                {
+                                   [dict setObject:contentJSON forKey:@"data"];
+                                }
+                            }
+                            jsonDic = dict;
+                        }
+                    }
+                    else
+                    {
+                        jsonDic = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
+                    }
                 }
                 else if([jsonDic safeObjectForKey:@"data"] == nil ||
                         ([[jsonDic safeObjectForKey:@"data"] isEqual:[NSNull null]]) ||
