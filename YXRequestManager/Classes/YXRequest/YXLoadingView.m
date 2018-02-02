@@ -125,8 +125,8 @@ static YXLoadingView *loadingView = nil;
     //围绕Z轴旋转，垂直与屏幕
     animation.toValue = [ NSValue valueWithCATransform3D:
                          
-                         CATransform3DMakeRotation(M_PI, 0.0, 0.0, 1.0)];
-    animation.duration = 0.5;
+                         CATransform3DMakeRotation(M_PI/2, 0.0, 0.0, 1.0)];
+    animation.duration = 0.15;
     //旋转效果累计，先转180度，接着再旋转180度，从而实现360旋转
     animation.cumulative = YES;
     animation.repeatCount = 1000;
