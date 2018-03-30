@@ -32,6 +32,10 @@ static YXLoadingView *loadingView = nil;
         [self addSubview:self.floatingView];
         [self addSubview:self.bottomView];
         [self.bottomView addSubview:self.rotationView];
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(becomeActive)
+                                                     name:UIApplicationDidBecomeActiveNotification
+                                                   object:nil];
     }
     return self;
 }
@@ -141,5 +145,18 @@ static YXLoadingView *loadingView = nil;
     [[[[UIApplication sharedApplication] delegate] window] makeKeyAndVisible];
 }
 
+
+- (void)becomeActive{
+    NSLog(@"becomeActive");
+    if(loadingView.superview)
+    {
+        [self doAnimation];
+    }
+}
+
+-(void)dealloc{
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 @end
