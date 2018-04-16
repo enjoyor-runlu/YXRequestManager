@@ -20,7 +20,7 @@ static YXLoadingView *loadingView = nil;
 
 @property (nonatomic, strong) UIWindow *iWindow;//Window
 @property (nonatomic, assign) BOOL showClearHUDFlag;
-
+@property (nonatomic, assign) BOOL responseDisplayFlag;
 @end
 
 @implementation YXLoadingView
@@ -93,8 +93,43 @@ static YXLoadingView *loadingView = nil;
     loadingView.showClearHUDFlag = NO;
     loadingView.bottomView.hidden = NO;
     loadingView.floatingView.alpha = 0.9f;
+    loadingView.responseDisplayFlag = NO;
     [loadingView doAnimation];
 }
+
++ (void)showFirstHub
+{
+    if (!loadingView) {
+        YXLoadingView *onLoadingView = [[YXLoadingView alloc] init];
+        loadingView = onLoadingView;
+    }
+    loadingView.showClearHUDFlag = NO;
+    loadingView.bottomView.hidden = NO;
+    loadingView.floatingView.alpha = 0.9f;
+    loadingView.responseDisplayFlag = YES;
+    [loadingView doAnimation];
+}
+
++ (void)showFirstClearHub
+{
+    if (!loadingView) {
+        YXLoadingView *onLoadingView = [[YXLoadingView alloc] init];
+        loadingView = onLoadingView;
+    }
+    loadingView.showClearHUDFlag = YES;
+    loadingView.bottomView.hidden = NO;
+    loadingView.floatingView.alpha = 0.9f;
+    loadingView.responseDisplayFlag = YES;
+    [loadingView doAnimation];
+}
+
++ (void)resetResponseDisplayFlag
+{
+    if (loadingView) {
+        loadingView.responseDisplayFlag = NO;
+    }
+}
+
 + (void)showClearHUD
 {
     if (!loadingView) {
@@ -104,13 +139,14 @@ static YXLoadingView *loadingView = nil;
     loadingView.showClearHUDFlag = YES;
     loadingView.bottomView.hidden = YES;
     loadingView.floatingView.alpha = 0.0f;
+    loadingView.responseDisplayFlag = NO;
     [loadingView doAnimation];
 }
 
 - (void)doAnimation
 {
     self.floatingView.alpha = 0.f;
-    [UIView animateWithDuration:.3f animations:^{
+    [UIView animateWithDuration:.05f animations:^{
         if(self.showClearHUDFlag)
         {
             self.floatingView.alpha = 0.0f;
@@ -139,10 +175,13 @@ static YXLoadingView *loadingView = nil;
 
 + (void)hide
 {
-    [loadingView.rotationView.layer removeAllAnimations];
-    [loadingView removeFromSuperview];
-    loadingView.iWindow = nil;
-    [[[[UIApplication sharedApplication] delegate] window] makeKeyAndVisible];
+    if(!loadingView.responseDisplayFlag)
+    {
+        [loadingView.rotationView.layer removeAllAnimations];
+        [loadingView removeFromSuperview];
+        loadingView.iWindow = nil;
+        [[[[UIApplication sharedApplication] delegate] window] makeKeyAndVisible];
+    }
 }
 
 

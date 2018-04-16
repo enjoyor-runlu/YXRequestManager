@@ -158,6 +158,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     //判断是否需要展示提示框
     if (requestApi.showClearHUD) {
         requestApi.setShowHUD(NO);
+        requestApi.setShowFirstHUD(NO);
         if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
             ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(showClearHUD));
         } else {
@@ -165,8 +166,31 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         }
     }
     else if (requestApi.showHUD) {
+        requestApi.setShowFirstHUD(NO);
         if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
             ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(show));
+        } else {
+            NSCAssert(NO, @"请配置HUD类名");
+        }
+    }
+    else if (requestApi.showFirstHUD) {
+        if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+            ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(showFirstHub));
+        } else {
+            NSCAssert(NO, @"请配置HUD类名");
+        }
+    }
+    else if (requestApi.showFirstClearHUD) {
+        if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+            ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(showFirstClearHub));
+        } else {
+            NSCAssert(NO, @"请配置HUD类名");
+        }
+    }
+    else
+    {
+        if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+            ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(resetResponseDisplayFlag));
         } else {
             NSCAssert(NO, @"请配置HUD类名");
         }
@@ -207,6 +231,11 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
             }
         } else {//请求失败的回调
             if (failureBlock) {
+                if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+                    ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(resetResponseDisplayFlag));
+                } else {
+                    NSCAssert(NO, @"请配置HUD类名");
+                }
                 if (requestApi.needCache) {//需要缓存,从缓存中读取数据
                     [[YXCacheCenter sharedInstance] objectForKey:requestApi.apiPath
                                                       withParams:requestApi.params
@@ -234,6 +263,21 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         }
     }];
 
+}
+
+/**
+ 取消小菊花加载框，真对一般依次发送两个请求，当时特别情况下，发送第一个请求后不发送第二个请求，需要取消加载框的情况
+ */
+-(void)hiddenHub
+{
+    if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+        ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(resetResponseDisplayFlag));
+    } else {
+        NSCAssert(NO, @"请配置HUD类名");
+    }
+    if ([YXRequestConfig sharedConfig].hudClassName) {
+        ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(hide));
+    }
 }
 
 #pragma mark - 取消请求

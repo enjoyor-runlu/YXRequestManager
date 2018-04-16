@@ -88,6 +88,10 @@ constructingBodyWithBlock:(nullable void(^)(id<AFMultipartFormData>_Nullable for
              successBlock:(SuccessBlock _Nullable)successBlock
              failureBlock:(FailureBlock _Nullable)failureBlock;
 
+/**
+ 取消小菊花加载框，真对一般依次发送两个请求，当时特别情况下，发送第一个请求后不发送第二个请求，需要取消加载框的情况
+ */
+- (void)hiddenHub;
 
 /**
  *  取消某一个请求

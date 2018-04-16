@@ -31,13 +31,25 @@
  */
 @property (nonatomic, assign, readonly) NSInteger         timeoutInterval;
 /**
- 是否展示加载框,默认展示
+ 是否展示加载框,默认展示，优先级为中等
  */
 @property (nonatomic, assign, readonly) BOOL              showHUD;
 /**
- 是否展示透明加载框,默认不展示
+ 是否展示透明加载框,默认不展示，优先级别最高
  */
 @property (nonatomic, assign, readonly) BOOL              showClearHUD;
+/**
+ 是否展示加载框,默认不展示，双请求合并，第一个请求显示加载框，返回成功时不取消加载框，失败时取消加载框，优先级别最低
+ */
+@property (nonatomic, assign, readonly) BOOL              showFirstHUD;
+/**
+ 是否展示透明加载框,默认不展示，双请求合并，第一个请求显示加载框，返回成功时不取消加载框，失败时取消加载框，优先级别最低
+ */
+@property (nonatomic, assign, readonly) BOOL              showFirstClearHUD;
+/**
+ 是否取消加载框,默认不取消，双请求合并，第二个请求不显示加载框，返回后取消加载框
+ */
+@property (nonatomic, assign, readonly) BOOL              cancelEndHUD;
 /**
  是否需要缓存数据,默认不需要
  */
@@ -85,6 +97,15 @@
  设置接口是否展示透明菊花
  */
 - (YXRequestApi *(^)(BOOL showClearHUD))setShowClearHUD;
+/**
+ 设置接口是否展示第一个请求菊花
+ */
+- (YXRequestApi *(^)(BOOL showFirstHUD))setShowFirstHUD;
+
+/**
+ 设置接口是否展示第一个请求透明菊花
+ */
+- (YXRequestApi *(^)(BOOL showClearHUD))setShowFirstClearHUD;
 /**
  设置接口是否需要缓存
  */

@@ -14,5 +14,8 @@
 + (void)showClearHUD;
 
 + (void)hide;
++ (void)showFirstHub;
++ (void)showFirstClearHub;
++ (void)resetResponseDisplayFlag;
 
 @end

@@ -10,6 +10,7 @@
 #import "YXRequestConfig.h"
 #import "YXRequestApi.h"
 #import <YXFDCategories/YXFDCategory.h>
+#import <objc/message.h>
 #if __has_include(<AFNetworking/AFNetworking.h>)
 #import <AFNetworking/AFNetworking.h>
 #else
@@ -30,6 +31,7 @@
 #define ResponseDataFormatErrorCode   -1111111111
 #define SpecialKeyValue @"1234567890"
 static NSString *const bocKeys = @"c6091428885d59621768176088293d95";
+#define IsEmptyString(str)      (!str || [str isEqual:[NSNull null]] || [str isEqualToString : @""])
 
 @interface NSDictionary (CheckSafty)
 
@@ -421,6 +423,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         
     } else if (serializationError) {
         defaultError = serializationError;
+        [self hiddenHub];
     } else {
         id jsonCode = [jsonDic safeObjectForKey:@"returnCode"];
         if ([jsonDic containKey:@"returnCode"] && (([jsonCode isKindOfClass:[NSString class]] && [jsonCode isEqualToString:@"200"]) || ([jsonCode isKindOfClass:[NSNumber class]] && [[jsonCode stringValue] isEqualToString:@"200"]))) {//表示成功
@@ -493,13 +496,16 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
                 }
                 else {
                     defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
+                    [self hiddenHub];
                 }
                 
             }
             else {
                 defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
+                [self hiddenHub];
             }
         } else {
+            [self hiddenHub];
             NSString *domain = @"";
             NSString *code = @"";
             NSDictionary *userInfo = [NSDictionary dictionary];
@@ -531,6 +537,19 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         completeHandler(jsonDic, defaultError);
     }
 }
+
+-(void)hiddenHub
+{
+    if (!IsEmptyString([YXRequestConfig sharedConfig].hudClassName)) {
+        ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(resetResponseDisplayFlag));
+    } else {
+        NSCAssert(NO, @"请配置HUD类名");
+    }
+    if ([YXRequestConfig sharedConfig].hudClassName) {
+        ((void (*)(id, SEL))objc_msgSend)([NSClassFromString([YXRequestConfig sharedConfig].hudClassName) class], @selector(hide));
+    }
+}
+
 #pragma mark -download
 
 - (NSURLSessionDownloadTask *)downloadTaskWithRequestApi:(YXRequestApi *)requestApi

@@ -32,6 +32,15 @@
  是否展示透明加载框,默认不展示
  */
 @property (nonatomic, assign, readwrite) BOOL              showClearHUD;
+/**
+ 是否展示加载框,默认不展示，双请求合并，第一个请求显示加载框，返回成功时不取消加载框，失败时取消加载框，优先级别最低
+ */
+@property (nonatomic, assign, readwrite) BOOL              showFirstHUD;
+
+/**
+ 是否展示加载框,默认不展示，双请求合并，第一个请求显示加载框，返回成功时不取消加载框，失败时取消加载框，优先级别最低
+ */
+@property (nonatomic, assign, readwrite) BOOL              showFirstClearHUD;
 
 //是否需要缓存数据
 @property (nonatomic, assign, readwrite) BOOL              needCache;
@@ -140,6 +149,28 @@
 {
     return ^(BOOL showClearHUD){
         self.showClearHUD = showClearHUD;
+        return self;
+    };
+}
+
+- (YXRequestApi *(^)(BOOL showFirstClearHUD))setShowFirstClearHUD
+{
+    return ^(BOOL showFirstClearHUD){
+        self.showFirstClearHUD = showFirstClearHUD;
+        self.showFirstHUD = NO;
+        self.showHUD = NO;
+        self.showClearHUD = NO;
+        return self;
+    };
+}
+
+- (YXRequestApi *(^)(BOOL showFirstHUD))setShowFirstHUD
+{
+    return ^(BOOL showFirstHUD){
+        self.showFirstHUD = showFirstHUD;
+        self.showFirstClearHUD = NO;
+        self.showHUD = NO;
+        self.showClearHUD = NO;
         return self;
     };
 }
