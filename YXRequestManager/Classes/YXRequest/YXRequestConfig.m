@@ -59,7 +59,6 @@
 {
     NSMutableDictionary *muBuiltinParameters = [[NSMutableDictionary alloc] init];
     [muBuiltinParameters setSafeObject:@"ios" forKey:@"mobileType"];//手机类型
-    [muBuiltinParameters setSafeObject:[UIDevice yixiang_uniqueID] forKey:@"deviceId"];//设备唯一ID
     [muBuiltinParameters setSafeObject:[UIDevice yixiang_appVersion] forKey:@"appVersion"];//版本号
     [muBuiltinParameters setSafeObject:[UIDevice yixiang_buildVersion] forKey:@"buildVersion"];//build号
     [muBuiltinParameters setSafeObject:[UIDevice yixiang_fullVersion] forKey:@"fullVersion"];//完整版本号(版本号+build号)
