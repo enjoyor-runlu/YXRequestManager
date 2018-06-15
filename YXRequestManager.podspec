@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YXRequestManager'
-  s.version          = '1.1.13'
+  s.version          = '2.0.0'
   s.summary          = 'YXRequestManager.'
 
 # This description is used to generate tags and improve search results.

@@ -446,7 +446,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
 }
 
 -(NSMutableDictionary *)processYixiangweipaiWithJsonDic:(NSDictionary *)jsonDic
-                   defaultError:(NSError *)defaultError
+                                           defaultError:(NSError *)defaultError
 {
     if (!jsonDic)
     {
@@ -454,7 +454,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     }
     else if ([jsonDic isKindOfClass:[NSDictionary class]])
     {
-        jsonDic = [jsonDic safeObjectForKey:@"data"];
+//        jsonDic = [jsonDic safeObjectForKey:@"data"];
     }
     else {
         defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
