@@ -426,116 +426,149 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         [self hiddenHub];
     } else {
         id jsonCode = [jsonDic safeObjectForKey:@"returnCode"];
-        if ([jsonDic containKey:@"returnCode"] && (([jsonCode isKindOfClass:[NSString class]] && [jsonCode isEqualToString:@"200"]) || ([jsonCode isKindOfClass:[NSNumber class]] && [[jsonCode stringValue] isEqualToString:@"200"]))) {//表示成功
-            if (!jsonDic)
-            {
-                jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"data"];
-            }
-            else if ([jsonDic containKey:@"data"])
-            {
-                if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSDictionary class]])
-                {
-                    jsonDic = [jsonDic safeObjectForKey:@"data"];
-                }
-                else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSArray class]])
-                {
-                    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-                    [dic setSafeObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
-                    jsonDic = dic;
-                }
-                else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
-                {
-                    BOOL secure = [[jsonDic safeObjectForKey:@"secure"] boolValue];
-                    if(secure)
-                    {
-                        NSString *content = [jsonDic safeObjectForKey:@"data"];
-                        NSData *decryptionData = [[NSData alloc]initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
-                        NSData *contentData = [decryptionData AES256NewDecryptWithKey:bocKeys];
-                        NSDictionary *contentJSON = [NSJSONSerialization JSONObjectWithData:contentData options:NSJSONReadingMutableContainers error:nil];
-                        NSString *contentJsonString = [[NSString alloc]initWithData:contentData encoding:NSUTF8StringEncoding];
-                        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-                        if (content.length==0) {
-                            [dict setObject:@"" forKey:@"data"];
-                        } else {
-                            if (contentJSON == nil) {
-                                if(contentJsonString == nil)
-                                {
-                                    [dict setObject:@"" forKey:@"data"];
-                                }
-                                else
-                                {
-                                    [dict setObject:contentJsonString forKey:@"data"];
-                                }
-                            } else {
-                                if(contentJSON == nil)
-                                {
-                                    [dict setObject:@"" forKey:@"data"];
-                                }
-                                else if(contentJSON && [contentJSON isKindOfClass:[NSDictionary class]])
-                                {
-                                    dict = [NSMutableDictionary dictionaryWithDictionary:contentJSON];
-                                }
-                                else
-                                {
-                                   [dict setObject:contentJSON forKey:@"data"];
-                                }
-                            }
-                            jsonDic = dict;
-                        }
-                    }
-                    else
-                    {
-                        jsonDic = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
-                    }
-                }
-                else if([jsonDic safeObjectForKey:@"data"] == nil ||
-                        ([[jsonDic safeObjectForKey:@"data"] isEqual:[NSNull null]]) ||
-                        [([NSString stringWithFormat:@"%@", [jsonDic safeObjectForKey:@"data"]]) isEqualToString:@"<null>"] || [([NSString stringWithFormat:@"%@", [jsonDic safeObjectForKey:@"data"]]) isEqualToString:@""])
-                {
-                    jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"data"];
-                }
-                else {
-                    defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
-                    [self hiddenHub];
-                }
-                
-            }
-            else {
-                defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
-                [self hiddenHub];
-            }
-        } else {
-            [self hiddenHub];
-            NSString *domain = @"";
-            NSString *code = @"";
-            NSDictionary *userInfo = [NSDictionary dictionary];
-            if ([jsonDic containKey:@"msg"]) {
-                domain = [jsonDic safeObjectForKey:@"msg"];
-            }
-            if ([jsonDic containKey:@"returnCode"]) {
-                code = [jsonDic safeObjectForKey:@"returnCode"];
-                if ([code isKindOfClass:[NSNumber class]]) {
-                    code = [[jsonDic safeObjectForKey:@"returnCode"] stringValue];
-                }
-            }
-            if ((jsonDic) && [jsonDic containKey:@"data"])
-            {
-                if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSDictionary class]])
-                {
-                    userInfo = [jsonDic safeObjectForKey:@"data"];
-                }
-                else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
-                {
-                    userInfo = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"dataKey"];
-                }
-            }
-            defaultError = [NSError errorWithDomain:domain code:[code longLongValue] userInfo:userInfo];
+        if(jsonCode)
+        {
+            defaultError = [self processWithJsonDic:jsonDic defaultError:defaultError];
+        }
+        else
+        {
+            defaultError = [self processYixiangweipaiWithJsonDic:jsonDic defaultError:defaultError];
         }
     }
     defaultError = [self handleErrorCode:defaultError];
     if (completeHandler) {
         completeHandler(jsonDic, defaultError);
     }
+}
+
+-( NSError *)processYixiangweipaiWithJsonDic:(NSDictionary *)jsonDic
+                   defaultError:(NSError *)defaultError
+{
+    if (!jsonDic)
+    {
+        jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"data"];
+    }
+    else if ([jsonDic isKindOfClass:[NSDictionary class]])
+    {
+        jsonDic = [jsonDic safeObjectForKey:@"data"];
+    }
+    else {
+        defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
+        [self hiddenHub];
+    }
+    return defaultError;
+}
+
+-( NSError *)processWithJsonDic:(NSDictionary *)jsonDic
+                   defaultError:(NSError *)defaultError
+{
+    id jsonCode = [jsonDic safeObjectForKey:@"returnCode"];
+    if ([jsonDic containKey:@"returnCode"] && (([jsonCode isKindOfClass:[NSString class]] && [jsonCode isEqualToString:@"200"]) || ([jsonCode isKindOfClass:[NSNumber class]] && [[jsonCode stringValue] isEqualToString:@"200"]))) {//表示成功
+        if (!jsonDic)
+        {
+            jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"data"];
+        }
+        else if ([jsonDic containKey:@"data"])
+        {
+            if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSDictionary class]])
+            {
+                jsonDic = [jsonDic safeObjectForKey:@"data"];
+            }
+            else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSArray class]])
+            {
+                NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+                [dic setSafeObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
+                jsonDic = dic;
+            }
+            else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
+            {
+                BOOL secure = [[jsonDic safeObjectForKey:@"secure"] boolValue];
+                if(secure)
+                {
+                    NSString *content = [jsonDic safeObjectForKey:@"data"];
+                    NSData *decryptionData = [[NSData alloc]initWithBase64EncodedString:content options:NSDataBase64DecodingIgnoreUnknownCharacters];
+                    NSData *contentData = [decryptionData AES256NewDecryptWithKey:bocKeys];
+                    NSDictionary *contentJSON = [NSJSONSerialization JSONObjectWithData:contentData options:NSJSONReadingMutableContainers error:nil];
+                    NSString *contentJsonString = [[NSString alloc]initWithData:contentData encoding:NSUTF8StringEncoding];
+                    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+                    if (content.length==0) {
+                        [dict setObject:@"" forKey:@"data"];
+                    } else {
+                        if (contentJSON == nil) {
+                            if(contentJsonString == nil)
+                            {
+                                [dict setObject:@"" forKey:@"data"];
+                            }
+                            else
+                            {
+                                [dict setObject:contentJsonString forKey:@"data"];
+                            }
+                        } else {
+                            if(contentJSON == nil)
+                            {
+                                [dict setObject:@"" forKey:@"data"];
+                            }
+                            else if(contentJSON && [contentJSON isKindOfClass:[NSDictionary class]])
+                            {
+                                dict = [NSMutableDictionary dictionaryWithDictionary:contentJSON];
+                            }
+                            else
+                            {
+                                [dict setObject:contentJSON forKey:@"data"];
+                            }
+                        }
+                        jsonDic = dict;
+                    }
+                }
+                else
+                {
+                    jsonDic = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"data"];
+                }
+            }
+            else if([jsonDic safeObjectForKey:@"data"] == nil ||
+                    ([[jsonDic safeObjectForKey:@"data"] isEqual:[NSNull null]]) ||
+                    [([NSString stringWithFormat:@"%@", [jsonDic safeObjectForKey:@"data"]]) isEqualToString:@"<null>"] || [([NSString stringWithFormat:@"%@", [jsonDic safeObjectForKey:@"data"]]) isEqualToString:@""])
+            {
+                jsonDic = [NSDictionary dictionaryWithObject:@"" forKey:@"data"];
+            }
+            else {
+                defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
+                [self hiddenHub];
+            }
+            
+        }
+        else {
+            defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
+            [self hiddenHub];
+        }
+    } else {
+        [self hiddenHub];
+        NSString *domain = @"";
+        NSString *code = @"";
+        NSDictionary *userInfo = [NSDictionary dictionary];
+        if ([jsonDic containKey:@"msg"]) {
+            domain = [jsonDic safeObjectForKey:@"msg"];
+        }
+        if ([jsonDic containKey:@"returnCode"]) {
+            code = [jsonDic safeObjectForKey:@"returnCode"];
+            if ([code isKindOfClass:[NSNumber class]]) {
+                code = [[jsonDic safeObjectForKey:@"returnCode"] stringValue];
+            }
+        }
+        if ((jsonDic) && [jsonDic containKey:@"data"])
+        {
+            if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSDictionary class]])
+            {
+                userInfo = [jsonDic safeObjectForKey:@"data"];
+            }
+            else if([[jsonDic safeObjectForKey:@"data"] isKindOfClass:[NSString class]])
+            {
+                userInfo = [NSDictionary dictionaryWithObject:[jsonDic safeObjectForKey:@"data"] forKey:@"dataKey"];
+            }
+        }
+        defaultError = [NSError errorWithDomain:domain code:[code longLongValue] userInfo:userInfo];
+    }
+    return defaultError;
 }
 
 -(void)hiddenHub
