@@ -428,11 +428,15 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         id jsonCode = [jsonDic safeObjectForKey:@"returnCode"];
         if(jsonCode)
         {
-            defaultError = [self processWithJsonDic:jsonDic defaultError:defaultError];
+            NSMutableDictionary *dic = [self processWithJsonDic:jsonDic defaultError:defaultError];
+            defaultError = dic[@"defaultError"];
+            jsonDic = dic[@"jsonDic"];
         }
         else
         {
-            defaultError = [self processYixiangweipaiWithJsonDic:jsonDic defaultError:defaultError];
+            NSMutableDictionary *dic = [self processYixiangweipaiWithJsonDic:jsonDic defaultError:defaultError];
+            defaultError = dic[@"defaultError"];
+            jsonDic = dic[@"jsonDic"];
         }
     }
     defaultError = [self handleErrorCode:defaultError];
@@ -441,7 +445,7 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
     }
 }
 
--( NSError *)processYixiangweipaiWithJsonDic:(NSDictionary *)jsonDic
+-(NSMutableDictionary *)processYixiangweipaiWithJsonDic:(NSDictionary *)jsonDic
                    defaultError:(NSError *)defaultError
 {
     if (!jsonDic)
@@ -456,10 +460,21 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         defaultError = [NSError errorWithDomain:@"返回data格式错误" code:ResponseDataFormatErrorCode userInfo:nil];
         [self hiddenHub];
     }
-    return defaultError;
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    if(defaultError)
+    {
+        [dic setObject:defaultError forKey:@"defaultError"];
+    }
+    
+    if(jsonDic)
+    {
+        [dic setObject:jsonDic forKey:@"jsonDic"];
+    }
+    
+    return dic;
 }
 
--( NSError *)processWithJsonDic:(NSDictionary *)jsonDic
+-(NSMutableDictionary *)processWithJsonDic:(NSDictionary *)jsonDic
                    defaultError:(NSError *)defaultError
 {
     id jsonCode = [jsonDic safeObjectForKey:@"returnCode"];
@@ -568,7 +583,18 @@ constructingBodyWithBlock:(void (^)(id<AFMultipartFormData>))constructingBlock
         }
         defaultError = [NSError errorWithDomain:domain code:[code longLongValue] userInfo:userInfo];
     }
-    return defaultError;
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    if(defaultError)
+    {
+       [dic setObject:defaultError forKey:@"defaultError"];
+    }
+    
+    if(jsonDic)
+    {
+        [dic setObject:jsonDic forKey:@"jsonDic"];
+    }
+    
+    return dic;
 }
 
 -(void)hiddenHub
