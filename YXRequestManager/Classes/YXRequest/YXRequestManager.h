@@ -11,7 +11,7 @@
 
 // 内部调试日志开关 0 关闭、1 打开
 #ifndef YXRequestLoggingEnabled
-#define YXRequestLoggingEnabled 1
+#define YXRequestLoggingEnabled 0
 #endif
 
 @class YXRequestApi;
