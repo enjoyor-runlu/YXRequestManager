@@ -12,7 +12,6 @@
 		53220D6C200C87EC00ADEBAD /* AESTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D66200C87EC00ADEBAD /* AESTool.m */; };
 		53220D6D200C87EC00ADEBAD /* NSData+Encryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 53220D67200C87EC00ADEBAD /* NSData+Encryption.m */; };
 		53607D401FE2A72E0034EAC8 /* YXLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */; };
-		537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 537AC60D1FE518DE0017F341 /* Default-568h@2x.png */; };
 		537AC6141FE521CE0017F341 /* YXRequestManagerAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */; };
 		53EB68331FDA755700416611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68321FDA755700416611 /* AppDelegate.m */; };
 		53EB68361FDA755700416611 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53EB68351FDA755700416611 /* ViewController.m */; };
@@ -41,7 +40,6 @@
 		53220D6A200C87EC00ADEBAD /* NSData+Encryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Encryption.h"; sourceTree = "<group>"; };
 		53607D3B1FE2A72E0034EAC8 /* YXLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YXLoadingView.h; sourceTree = "<group>"; };
 		53607D3C1FE2A72E0034EAC8 /* YXLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YXLoadingView.m; sourceTree = "<group>"; };
-		537AC60D1FE518DE0017F341 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YXRequestManagerAssets.xcassets; sourceTree = "<group>"; };
 		538CFF711FDE204B007C1FEA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53EB682E1FDA755700416611 /* YXRequestManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXRequestManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,7 +99,6 @@
 		53EB68251FDA755700416611 = {
 			isa = PBXGroup;
 			children = (
-				537AC60D1FE518DE0017F341 /* Default-568h@2x.png */,
 				53EB68301FDA755700416611 /* YXRequestManager */,
 				53EB682F1FDA755700416611 /* Products */,
 				FA052C5F1395296030A831B2 /* Pods */,
@@ -258,7 +255,6 @@
 			files = (
 				53EB683E1FDA755700416611 /* LaunchScreen.storyboard in Resources */,
 				537AC6141FE521CE0017F341 /* YXRequestManagerAssets.xcassets in Resources */,
-				537AC60E1FE518DE0017F341 /* Default-568h@2x.png in Resources */,
 				53EB683B1FDA755700416611 /* Assets.xcassets in Resources */,
 				53EB68391FDA755700416611 /* Main.storyboard in Resources */,
 			);
