@@ -86,12 +86,12 @@
 		53220D64200C87EC00ADEBAD /* AESCategory */ = {
 			isa = PBXGroup;
 			children = (
-				53220D65200C87EC00ADEBAD /* NSString+Hash.m */,
+				53220D69200C87EC00ADEBAD /* AESTool.h */,
 				53220D66200C87EC00ADEBAD /* AESTool.m */,
+				53220D6A200C87EC00ADEBAD /* NSData+Encryption.h */,
 				53220D67200C87EC00ADEBAD /* NSData+Encryption.m */,
 				53220D68200C87EC00ADEBAD /* NSString+Hash.h */,
-				53220D69200C87EC00ADEBAD /* AESTool.h */,
-				53220D6A200C87EC00ADEBAD /* NSData+Encryption.h */,
+				53220D65200C87EC00ADEBAD /* NSString+Hash.m */,
 			);
 			path = AESCategory;
 			sourceTree = "<group>";
