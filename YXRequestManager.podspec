@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name             = 'YXRequestManager'
-  spec.version          = '2.0.1'
+  spec.version          = '2.0.2'
   spec.license          = { :type => 'MIT', :file => 'LICENSE' }
   spec.homepage         = 'https://github.com/enjoyor-runlu/YXRequestManager'
   spec.author           = { '' => '' }
@@ -17,6 +17,6 @@ Pod::Spec.new do |spec|
   spec.frameworks = 'UIKit', 'Foundation'
   
   spec.dependency 'YXFDCategories'
-  spec.dependency 'AFNetworking', '3.1.0'
+  spec.dependency 'AFNetworking'
   spec.dependency 'TMCache'
 end
