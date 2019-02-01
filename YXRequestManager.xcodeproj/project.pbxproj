@@ -134,8 +134,8 @@
 		53EB684A1FDA75E800416611 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				53220D64200C87EC00ADEBAD /* AESCategory */,
 				537AC6131FE521CE0017F341 /* YXRequestManagerAssets.xcassets */,
+				53220D64200C87EC00ADEBAD /* AESCategory */,
 				53EB684B1FDA75E800416611 /* YXCache */,
 				53EB684E1FDA75E800416611 /* YXRequest */,
 			);
