@@ -5,6 +5,6 @@ platform :ios, '8.0'
 
 target 'YXRequestManager' do
     pod 'YXFDCategories'
-    pod 'AFNetworking', '3.1.0'
+    pod 'AFNetworking'
     pod 'TMCache'
 end
